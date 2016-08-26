@@ -1,0 +1,14 @@
+D:\work\projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+D:\work\projects\Tetris\Tetris\bin\Debug\Tetris.exe
+D:\work\projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+D:\work\projects\Tetris\Tetris\obj\Debug\MainWindow.baml
+D:\work\projects\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+D:\work\projects\Tetris\Tetris\obj\Debug\App.g.cs
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.g.resources
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.exe.licenses
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.exe
+D:\work\projects\Tetris\Tetris\obj\Debug\Tetris.pdb
