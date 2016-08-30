@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
 namespace Tetris.Classes
 {
-    public class Tetromino
+    /// <summary>Класс который отвечает за генерацию фигур</summary>
+    public class Tetromino 
     {
-
-        private Brush[] _availableColors =
+        private static readonly Random _propRandomizer = new Random();    //для случайного отбора фигур
+        private readonly Brush[] _availableColors =   //Доступные цвета для фигур
         {
             Brushes.DarkGoldenrod,
             Brushes.Crimson,
@@ -24,36 +21,51 @@ namespace Tetris.Classes
             Brushes.DarkMagenta,
             Brushes.Gold
         };
+        private readonly Point[] _shape;    //форма фигуры
         private Point _currentPos; //позиция фигуры
-        private Point[] _shape;    //форма фигуры
         private Brush _color;       //цвет фигуры
         private bool _rotatable;   //можно ли вращать        
-        
+       
+        /// <summary> геттер позиции фигуры </summary>
+        /// <returns>позицию фигуры</returns>
         public Point GetFigurePosition()
         {
             return _currentPos;
         }
+        /// <summary> Воззвращает цвет фигуры </summary>
+        /// <returns></returns>
         public Brush GetFigureColor()
         {
             return _color;
         }
+        /// <summary> Воззвращает форму фигуры в виде массива поинтов </summary>
+        /// <returns>массив поинтов</returns>
         public Point[] GetFigureShape()
         {
             return _shape;
         }
-
-        public void MoveLeft()
+        /// <summary> Вращаема ли фигура</summary>
+        /// <returns>true если можно вращать</returns>
+        public bool IsRotatable()
+        {
+            return _rotatable;
+        }
+        /// <summary> Сдвиг положения фигуры налево на 1</summary>
+        public void MoveLeft()    
         {
             _currentPos.X -= 1;
         }
+        /// <summary> Сдвиг положения фигуры направо на 1</summary>
         public void MoveRight()
         {
             _currentPos.X += 1;
         }
+        /// <summary> Сдвиг положения фигуры вниз на 1</summary>
         public void MoveDown()
         {
             _currentPos.Y += 1;
         }
+        ///<summary> Вращение  фигуры по часовой стрелке на 90 градусов</summary>
         public void Rotate()
         {
             if (_rotatable)
@@ -72,17 +84,18 @@ namespace Tetris.Classes
         {
             _currentPos = new Point(0,0);
             _color = Brushes.Transparent;
-            _shape = generateShape();              
+            _shape = GenerateShape();              
         }
-
-        private Point[] generateShape()
+        /// <summary> Случайным образом генерирует цвет и  форму фигуры в виде массива поинтов </summary>
+         /// <returns>форму в виде массива поинтов</returns>
+        private Point[] GenerateShape()
         {
-            var randomShape = new Random().Next(0, 7);
+            var randomShape = _propRandomizer.Next(0, 7);
             switch (randomShape)
             {
                 case 0:    //I
                     _rotatable = true;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                       new Point(0,-1),
@@ -93,7 +106,7 @@ namespace Tetris.Classes
                     
                 case 1:    //J
                     _rotatable = true;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                      new Point(-1,-1),
@@ -103,7 +116,7 @@ namespace Tetris.Classes
                     };
                 case 2: // L
                     _rotatable = true;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                       new Point(0,0),
@@ -111,9 +124,9 @@ namespace Tetris.Classes
                         new Point(1,0),
                         new Point(1,-1)
                     };
-                case 3:  //o
+                case 3:  //O
                     _rotatable = false;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                       new Point(0,0),
@@ -123,7 +136,7 @@ namespace Tetris.Classes
                     };
                 case 4:  //S
                     _rotatable = true;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                       new Point(0,0),
@@ -133,7 +146,7 @@ namespace Tetris.Classes
                     };
                 case 5: //T
                     _rotatable = true;
-                    _color = _availableColors[new Random().Next(0, _availableColors.Length)];
+                    _color = _availableColors[_propRandomizer.Next(0, _availableColors.Length)];
                     return new Point[]
                     {
                       new Point(0,0),
@@ -155,6 +168,5 @@ namespace Tetris.Classes
                     return null;
             }
         }
-
     }
 }

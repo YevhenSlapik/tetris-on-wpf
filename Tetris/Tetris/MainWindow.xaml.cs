@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using Tetris.Classes;
 
@@ -20,51 +9,52 @@ namespace Tetris
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
+    public partial class MainWindow{
         private DispatcherTimer _timer;
-        private Board _tetrisBoard;
+        private MainBoard _tetrisMainBoard;
         public MainWindow()
         {   
             InitializeComponent();
-        }
+        }                                             
         public void MainWindow_Initialized(object sender,EventArgs e)
         {
             _timer = new DispatcherTimer();
-            _timer.Tick += new EventHandler(Timer_Tick); 
+            _timer.Tick += Timer_Tick; 
             GameStart();
         }
 
         private void GameStart()                                  
         {
             tetrisGrid.Children.Clear();
-            _tetrisBoard = new Board(tetrisGrid);
+            nextFigureGrid.Children.Clear();
+            _tetrisMainBoard = new MainBoard(tetrisGrid, nextFigureGrid);
             _timer.Stop();
             _timer.Start();
+
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            _timer.Interval = new TimeSpan(0, 0, 0, 400);
-            _tetrisBoard.CurrentFigureMoveDown();
+            _timer.Interval = new TimeSpan(0, 0, 0, 0,400);
+            _tetrisMainBoard.CurrentFigureMoveDown();
         }
-
+                                                                            
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
                 case Key.Left:
-                    if(_timer.IsEnabled)_tetrisBoard.CurrentFigureMoveLeft();
+                    if(_timer.IsEnabled)_tetrisMainBoard.CurrentFigureMoveLeft();
                     break;
                 case Key.Right:
                     if (_timer.IsEnabled)                                 
-                        _tetrisBoard.CurrentFigureMoveRight();
+                        _tetrisMainBoard.CurrentFigureMoveRight();
                     break;
                 case Key.Down:
-                        _tetrisBoard.CurrentFigureMoveDown();
+                        _tetrisMainBoard.CurrentFigureMoveDown();
                     break;
                 case Key.Space:
-                    _tetrisBoard.CurrentFigureMoveRotate();
+                    _tetrisMainBoard.CurrentFigureMoveRotate();
                     break;
                 case Key.F2:
                     GameStart();
