@@ -72,7 +72,7 @@ namespace Tetris.Classes
         {
             _currentPos = new Point(0,0);
             _color = Brushes.Transparent;
-            _shape = generateShape();
+            _shape = generateShape();              
         }
 
         private Point[] generateShape()
@@ -85,10 +85,10 @@ namespace Tetris.Classes
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(-1,0), 
-                      new Point(1,0), 
-                      new Point(2,0)
+                      new Point(0,-1),
+                        new Point(-1,-1),
+                        new Point(1,-1),
+                        new Point(2,-1)
                     };   
                     
                 case 1:    //J
@@ -96,61 +96,63 @@ namespace Tetris.Classes
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(1,-1), 
-                      new Point(-1,0), 
-                      new Point(0,0), 
-                      new Point(1,0)
+                     new Point(-1,-1),
+                        new Point(-1,0),
+                        new Point(0,0),
+                        new Point(1,0)
                     };
                 case 2: // L
                     _rotatable = true;
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(-1,0), 
-                      new Point(1,0), 
-                      new Point(-1,1)
+                      new Point(0,0),
+                        new Point(-1,0),
+                        new Point(1,0),
+                        new Point(1,-1)
                     };
                 case 3:  //o
-                    _rotatable = true;
+                    _rotatable = false;
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(0,1), 
-                      new Point(1,0), 
-                      new Point(1,1)
+                      new Point(0,0),
+                        new Point(0,-1),
+                        new Point(1,0),
+                        new Point(1,-1)
                     };
                 case 4:  //S
                     _rotatable = true;
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(-1,0), 
-                      new Point(0,1), 
-                      new Point(1,0)
+                      new Point(0,0),
+                        new Point(-1,0),
+                        new Point(0,-1),
+                        new Point(1,-1)
                     };
                 case 5: //T
                     _rotatable = true;
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(-1,0), 
-                      new Point(0,-1), 
-                      new Point(1,1)
+                      new Point(0,0),
+                        new Point(-1,0),
+                        new Point(0,-1),
+                        new Point(1,0)
                     };
                 case 6://Z
                     _rotatable = true;
                     _color = _availableColors[new Random().Next(0, _availableColors.Length)];
                     return new Point[]
                     {
-                      new Point(0,0), 
-                      new Point(-1,0), 
-                      new Point(0,1), 
-                      new Point(1,1)
+                      new Point(0,-1),                              
+                      new Point(-1,-1),
+                        new Point(0,0),
+                        new Point(1,0)
                     };
+                default:
+                    return null;
             }
         }
 
