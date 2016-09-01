@@ -1,0 +1,2475 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utils.Extensions.v2</name>
+    </assembly>
+    <members>
+        <member name="T:Utils.Extensions.AnonymousType">
+            <summary> Вкрадено!!!  A convenient method of accessing the values of an  anonymous type without needing to define a separate class </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.#ctor(System.Object)">
+            <summary> Creates a new Anonymous type from the value provided </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.#ctor">
+            <summary> Creates an empty Anonymous Type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Create(System.Object)">
+            <summary> Creates a new anonymous type from the object provided </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Create">
+            <summary> Creates an empty anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Call(System.String)">
+            <summary> Attempts to execute a method that has been added to this type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Call(System.String,System.Object[])">
+            <summary> Attempts to execute a method with parameters that has been added to this type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Call``1(System.String)">
+            <summary> Attempts to execute a method that has been added to this type and return the value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Call``1(System.String,System.Object[])">
+            <summary> Attempts to execute a method with parameters that has been added to this type and return the value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Has(System.String)">
+            <summary> Checks if this Anonymous Type has the specified property </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Get``1(System.String)">
+            <summary> Finds the property and returns the value. </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Get``1(System.String,``0)">
+            <summary> Finds the property and returns the value. If no value was found,  the default value is returned instead. </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Set(System.String,System.Object)">
+            <summary> Sets the value of a property on an anonymous type </summary>
+            <remarks>Anonymous types are read-only - this saves a value to another location</remarks>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.Set``1(System.String,``0)">
+            <summary> Sets the value of a property on an anonymous type </summary>
+            <remarks>Anonymous types are read-only - this saves a value to another location</remarks>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.GetProperties">
+            <summary> Отримати всі властивості </summary>
+            <returns>Властивості</returns>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.GetPropertiesEx">
+            <summary> Отримати всі властивості з типом</summary>
+            <returns>Властивості</returns>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType._Init(System.Object)">
+            <summary> Створити анонімний тип </summary>
+            <param name="type">Базовий тип</param>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod(System.String,System.Action)">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``1(System.String,Utils.Extensions.WithAction{``0})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``2(System.String,Utils.Extensions.WithAction{``0,``1})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``3(System.String,Utils.Extensions.WithAction{``0,``1,``2})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``4(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``5(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``6(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``7(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``8(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``9(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``10(System.String,Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary> Appends a lambda as a function to this anonymous type </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``1(System.String,System.Func{``0})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``2(System.String,Utils.Extensions.WithResultAction{``0,``1})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``3(System.String,Utils.Extensions.WithResultAction{``0,``1,``2})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``4(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``5(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``6(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``7(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``8(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``9(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``10(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.SetMethod``11(System.String,Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">
+            <summary> Appends a lambda as a function to this anonymous type that returns a value </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``1(Utils.Extensions.WithAction{``0})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``2(Utils.Extensions.WithAction{``0,``1})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``3(Utils.Extensions.WithAction{``0,``1,``2})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``4(Utils.Extensions.WithAction{``0,``1,``2,``3})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``5(Utils.Extensions.WithAction{``0,``1,``2,``3,``4})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``6(Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``7(Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``8(Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``9(Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``10(Utils.Extensions.WithAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``2(Utils.Extensions.WithResultAction{``0,``1})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``3(Utils.Extensions.WithResultAction{``0,``1,``2})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``4(Utils.Extensions.WithResultAction{``0,``1,``2,``3})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``5(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``6(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``7(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``8(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``9(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``10(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType.With``11(Utils.Extensions.WithResultAction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">
+            <summary> Maps each variable name to a matching property then calls the  provided delegate with the parameters. This method IS case-sensitive </summary>
+        </member>
+        <member name="M:Utils.Extensions.AnonymousType._Invoke(System.Delegate)">
+            <summary> Invokes a delegate method using the name and type mappings to the correct type in the anonymous type </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`1">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`2">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`3">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`4">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`5">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`6">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`7">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`8">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`9">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithAction`10">
+            <summary> Delegate to be used with AnonymousType.With </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`2">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`3">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`4">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`5">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`6">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`7">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`8">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`9">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`10">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:Utils.Extensions.WithResultAction`11">
+            <summary> Delegate to be used with AnonymousType.With but also returns a result </summary>
+        </member>
+        <member name="T:System.Data.BaseDataReader">
+            <summary>Базовий клас читачів даних (AsyncDataReader, CustomDataReader, ...).</summary>
+        </member>
+        <member name="F:System.Data.BaseDataReader.Reader">
+            <summary>Читач даних. Передається в конструктор.</summary>
+        </member>
+        <member name="M:System.Data.BaseDataReader.#ctor(System.Data.IDataReader)">
+            <summary>Конструктор.</summary>
+            <param name="sourceReader">Читач даних. Наприклад: selectCommand.ExecuteReader().</param>
+        </member>
+        <member name="M:System.Data.BaseDataReader.Read">
+            <summary>Advances the <see cref="T:System.Data.IDataReader"/> to the next record.</summary>
+            <returns>true if there are more rows; otherwise, false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetSchemaTable">
+            <summary>Returns a <see cref="T:System.Data.DataTable"/> that describes 
+            the column metadata of the <see cref="T:System.Data.IDataReader"/>.</summary>
+            <returns>A <see cref="T:System.Data.DataTable"/> that describes the column metadata.</returns>
+            <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Data.IDataReader"/> 
+            is closed.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.Close">
+            <summary>Closes the <see cref="T:System.Data.IDataReader"/> 0bject.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.NextResult">
+            <summary>Advances the data reader to the next result, 
+            when reading the results of batch SQL statements.</summary>
+            <returns>true if there are more rows; otherwise, false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, 
+            or resetting unmanaged resources.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.CheckIfDataReadAllowed">
+            <summary>Перевіряє чи можливе читання даних. Інакше генерує виключення.</summary>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetValueAs``1(System.Int32)">
+            <summary>Повертає значення вказаного поля у вказаному типі.</summary>
+            <typeparam name="T">Тип, в який конвертуєтся значення вказаного поля.</typeparam>
+            <param name="i">Індекс поля для пошуку.</param>
+            <returns>Значення вказаного поля у вказаному типі.</returns>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetName(System.Int32)">
+            <summary>Gets the name for the field to find.</summary>
+            <returns>The name of the field or the empty string (""), if there is no value to return.</returns>
+            <param name="i">The index of the field to find. </param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetDataTypeName(System.Int32)">
+            <summary>Gets the data type information for the specified field.</summary>
+            <returns>The data type information for the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetFieldType(System.Int32)">
+            <summary>Gets the <see cref="T:System.Type"/> information corresponding to the 
+            type of <see cref="T:System.Object"/> that would be returned from 
+            <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)"/>.</summary>
+            <returns>The <see cref="T:System.Type"/> information corresponding to the 
+            type of <see cref="T:System.Object"/> that would be returned from 
+            <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)"/>.</returns>
+            <param name="i">The index of the field to find. </param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetValue(System.Int32)">
+            <summary>Return the value of the specified field.</summary>
+            <returns>The <see cref="T:System.Object"/> which will contain the field value upon return.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetValues(System.Object[])">
+            <summary>Gets all the attribute fields in the collection for the current record.</summary>
+            <returns>The number of instances of <see cref="T:System.Object"/> in the array.</returns>
+            <param name="values">An array of <see cref="T:System.Object"/> to copy the attribute fields into.</param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetOrdinal(System.String)">
+            <summary>Return the index of the named field.</summary>
+            <returns>The index of the named field.</returns>
+            <param name="name">The name of the field to find.</param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetBoolean(System.Int32)">
+            <summary>Gets the value of the specified column as a Boolean.</summary>
+            <returns>The value of the column.</returns>
+            <param name="i">The zero-based column ordinal.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetByte(System.Int32)">
+            <summary>Gets the 8-bit unsigned integer value of the specified column.</summary>
+            <returns>The 8-bit unsigned integer value of the specified column.</returns>
+            <param name="i">The zero-based column ordinal.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>Reads a stream of bytes from the specified column offset into the buffer 
+            as an array, starting at the given buffer offset.</summary>
+            <returns>The actual number of bytes read.</returns>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferoffset">The index for buffer to start the read operation.</param>
+            <param name="fieldOffset">The index within the field from which to start the read operation.</param>
+            <param name="i">The zero-based column ordinal.</param>
+            <param name="length">The number of bytes to read.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetChar(System.Int32)">
+            <summary>Gets the character value of the specified column.</summary>
+            <returns>The character value of the specified column.</returns>
+            <param name="i">The zero-based column ordinal.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>Reads a stream of characters from the specified column offset into the buffer 
+            as an array, starting at the given buffer offset.</summary>
+            <returns>The actual number of characters read.</returns>
+            <param name="fieldoffset">The index within the row from which to start the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferoffset">The index for buffer to start the read operation.</param>
+            <param name="i">The zero-based column ordinal.</param>
+            <param name="length">The number of bytes to read.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>. </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetGuid(System.Int32)">
+            <summary>Returns the GUID value of the specified field.</summary>
+            <returns>The GUID value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetInt16(System.Int32)">
+            <summary>Gets the 16-bit signed integer value of the specified field.</summary>
+            <returns>The 16-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetInt32(System.Int32)">
+            <summary>Gets the 32-bit signed integer value of the specified field.</summary>
+            <returns>The 32-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetInt64(System.Int32)">
+            <summary>Gets the 64-bit signed integer value of the specified field.</summary>
+            <returns>The 64-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetFloat(System.Int32)">
+            <summary>Gets the single-precision floating point number of the specified field.</summary>
+            <returns>The single-precision floating point number of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetDouble(System.Int32)">
+            <summary>Gets the double-precision floating point number of the specified field.</summary>
+            <returns>The double-precision floating point number of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetString(System.Int32)">
+            <summary>Gets the string value of the specified field.</summary>
+            <returns>The string value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetDecimal(System.Int32)">
+            <summary>Gets the fixed-position numeric value of the specified field.</summary>
+            <returns>The fixed-position numeric value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetDateTime(System.Int32)">
+            <summary>Gets the date and time data value of the specified field.</summary>
+            <returns>The date and time data value of the spcified field.</returns>
+            <param name="i">The index of the field to find. </param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range 
+            of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.GetData(System.Int32)">
+            <summary>Gets an <see cref="T:System.Data.IDataReader"/> to be used when the field 
+            points to more remote structured data.</summary>
+            <returns>An <see cref="T:System.Data.IDataReader"/> to be used when the field 
+            points to more remote structured data.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.BaseDataReader.IsDBNull(System.Int32)">
+            <summary>Return whether the specified field is set to null.</summary>
+            <returns>true if the specified field is set to null. Otherwise, false.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.CurrentRecord">
+            <summary>Поточний запис даних.</summary>
+        </member>
+        <member name="P:System.Data.BaseDataReader.IsClosed">
+            <summary>Gets a value indicating whether the data reader is closed.</summary>
+            <returns>true if the data reader is closed; otherwise, false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.Depth">
+            <summary>Gets a value indicating the depth of nesting for the current row.</summary>
+            <returns>The level of nesting.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.RecordsAffected">
+            <summary>Gets the number of rows changed, inserted, or deleted by execution of 
+            the SQL statement.</summary>
+            <returns>The number of rows changed, inserted, or deleted; 
+            0 if no rows were affected or the statement failed; and -1 for SELECT statements.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.FieldCount">
+            <summary>Gets the number of columns in the current row.</summary>
+            <returns>When not positioned in a valid recordset, 0; otherwise the number of 
+            columns in the current record. The default is -1.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.System#Data#IDataRecord#Item(System.Int32)">
+            <summary>Gets the column located at the specified index.</summary>
+            <returns>The column located at the specified index as an <see cref="T:System.Object"/>.</returns>
+            <param name="i">The index of the column to get.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside the 
+            range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.BaseDataReader.System#Data#IDataRecord#Item(System.String)">
+            <summary>Gets the column with the specified name.</summary>
+            <returns>The column with the specified name as an <see cref="T:System.Object"/>.</returns>
+            <param name="name">The name of the column to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">No column with the specified name was found.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:System.Data.CommandBatch">
+            <summary>Група команд, що має виконуватись як одна команда</summary>
+        </member>
+        <member name="M:System.Data.CommandBatch.#ctor(System.Data.IDbCommand[])">
+            <summary>Конструктор</summary>
+            <param name="cmds">Група команд, що має виконуватись як одна команда</param>
+        </member>
+        <member name="M:System.Data.CommandBatch.GetCommandText">
+            <summary>Одержання тексту команди з підставленними значеннями параметрів</summary>
+            <returns>Рядкове представлення команди</returns>
+        </member>
+        <member name="M:System.Data.CommandBatch.GetCommandText(System.Globalization.CultureInfo)">
+            <summary>Одержання тексту команди з підставленними значеннями параметрів</summary>
+            <param name="ci"></param>
+            <returns>Рядкове представлення команди</returns>
+        </member>
+        <member name="M:System.Data.CommandBatch.SyncParametersValues">
+            <summary>Синхронізує значення параметрів пачки команд із значеннями параметрів кожної команди, 
+            що входить до пачки</summary>
+        </member>
+        <member name="M:System.Data.CommandBatch.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, 
+            or resetting unmanaged resources.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.Prepare">
+            <summary>Creates a prepared (or compiled) version of the command on the data source.</summary>
+            <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Data.OleDb.OleDbCommand.Connection"/> is not set.-or- The <see cref="P:System.Data.OleDb.OleDbCommand.Connection"/> is not <see cref="!:System.Data.OleDb.OleDbConnection.Open"/>. 
+            </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.Cancel">
+            <summary>Attempts to cancels the execution of an <see cref="T:System.Data.IDbCommand"/>.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.CreateParameter">
+            <summary>Creates a new instance of an <see cref="T:System.Data.IDbDataParameter"/> object.</summary>
+            <returns>An IDbDataParameter object.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.ExecuteNonQuery">
+            <summary>На основі параметрів команд проводиться оновлення значення параметрів пакету і 
+            здійснюється виконання команди</summary>
+            <returns>Кількість рядків, на які вплинуло виконання команди.</returns>
+            <exception cref="T:System.InvalidOperationException">The connection does not exist.-or- The connection is not open. </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.ExecuteReader">
+            <summary>Executes the <see cref="P:System.Data.IDbCommand.CommandText"/> against the 
+            <see cref="P:System.Data.IDbCommand.Connection"/> and builds an 
+            <see cref="T:System.Data.IDataReader"/>.</summary>
+            <returns>An <see cref="T:System.Data.IDataReader"/> object.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.ExecuteReader(System.Data.CommandBehavior)">
+            <summary>Executes the <see cref="P:System.Data.IDbCommand.CommandText"/> against the 
+            <see cref="P:System.Data.IDbCommand.Connection"/>, and builds an 
+            <see cref="T:System.Data.IDataReader"/> using one of the 
+            <see cref="T:System.Data.CommandBehavior"/> values.</summary>
+            <returns>An <see cref="T:System.Data.IDataReader"/> object.</returns>
+            <param name="behavior">One of the <see cref="T:System.Data.CommandBehavior"/> values.</param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.CommandBatch.ExecuteScalar">
+            <summary>Executes the query, and returns the first column of the first row in the 
+            resultset returned by the query. Extra columns or rows are ignored.</summary>
+            <returns>The first column of the first row in the resultset.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.Commands">
+            <summary>Перелік команд, що входять до пакету</summary>
+        </member>
+        <member name="P:System.Data.CommandBatch.Connection">
+            <summary>Gets or sets the <see cref="T:System.Data.IDbConnection"/> used by this 
+            instance of the <see cref="T:System.Data.IDbCommand"/>.</summary>
+            <returns>The connection to the data source.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.Transaction">
+            <summary>Gets or sets the transaction within which the Command object of a .NET Framework 
+            data provider executes.</summary>
+            <returns>the Command object of a .NET Framework data provider executes. The default value is null.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.CommandText">
+            <summary>Gets or sets the text command to run against the data source.</summary>
+            <returns>The text command to execute. The default value is an empty string ("").</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.CommandTimeout">
+            <summary>Gets or sets the wait time before terminating the attempt to execute a command 
+            and generating an error.</summary>
+            <returns>The time (in seconds) to wait for the command to execute. The default value is 30 seconds.</returns>
+            <exception cref="T:System.ArgumentException">The property value assigned is less than 0. </exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.CommandType">
+            <summary>Indicates or specifies how the <see cref="P:System.Data.IDbCommand.CommandText"/> 
+            property is interpreted.</summary>
+            <returns>One of the <see cref="T:System.Data.CommandType"/> values. The default is Text.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.Parameters">
+            <summary>Gets the <see cref="T:System.Data.IDataParameterCollection"/>.</summary>
+            <returns>The parameters of the SQL statement or stored procedure.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.CommandBatch.UpdatedRowSource">
+            <summary>Gets or sets how command results are applied to the <see cref="T:System.Data.DataRow"/> 
+            when used by the <see cref="M:System.Data.IDataAdapter.Update(System.Data.DataSet)"/> method of 
+            a <see cref="T:System.Data.Common.DbDataAdapter"/>.</summary>
+            <returns>One of the <see cref="T:System.Data.UpdateRowSource"/> values. The default is Both unless 
+            the command is automatically generated. Then the default is None.</returns>
+            <exception cref="T:System.ArgumentException">The value entered was not one of the 
+            <see cref="T:System.Data.UpdateRowSource"/> values.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:System.Data.ConnectionStateManager">
+            <summary>Менеджер стану з'єднання з базою даних</summary>
+        </member>
+        <member name="M:System.Data.ConnectionStateManager.#ctor(System.Data.IDbConnection)">
+            <summary>Конструктор. Відкриває вказане з'єданння з базою даних, якщо потрібно. 
+            При знищенні об'єкта (Dispose) з'єднання закривається</summary>
+            <param name="connection">З'єднання з базою данних</param>
+        </member>
+        <member name="M:System.Data.ConnectionStateManager.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, 
+             or resetting unmanaged resources.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.ConnectionStateManager.Dispose(System.Boolean)">
+            <summary>Звільнення ресурсів. Закриття з'єднання з базою даних, якщо це необхідно</summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:System.Data.ConnectionStateManager.Connection">
+            <summary>З'єдання з базою даних, що знаходиться під контролем</summary>
+        </member>
+        <member name="T:System.Data.DbDataParameter">
+            <summary>Допоміжний клас для роботи з "просто" DbDataParameter-ами</summary>
+        </member>
+        <member name="M:System.Data.DbDataParameter.#ctor">
+            <summary>Конструктор</summary>
+        </member>
+        <member name="M:System.Data.DbDataParameter.ToString">
+            <summary>Returns a <see cref="T:System.String"></see> that represents the 
+             current <see cref="T:System.Object"></see>.</summary>
+            <returns>A <see cref="T:System.String"></see> that represents the current 
+             <see cref="T:System.Object"></see>.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.DbType">
+            <summary>Gets or sets the <see cref="T:System.Data.DbType"/> of the parameter.</summary>
+            <returns>One of the <see cref="T:System.Data.DbType"/> values. 
+            The default is <see cref="F:System.Data.DbType.String"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">The property was not set to a valid 
+            <see cref="T:System.Data.DbType"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.Direction">
+            <summary>Gets or sets a value indicating whether the parameter is input-only, 
+            output-only, bidirectional, or a stored procedure return value parameter.</summary>
+            <returns> One of the <see cref="T:System.Data.ParameterDirection"/> values.
+            The default is Input.</returns>
+            <exception cref="T:System.ArgumentException">The property was not set to one of the valid 
+            <see cref="T:System.Data.ParameterDirection"/> values.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.IsNullable">
+            <summary>Gets a value indicating whether the parameter accepts null values.</summary>
+            <returns>true if null values are accepted; otherwise, false. The default is false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.ParameterName">
+            <summary>Gets or sets the name of the <see cref="T:System.Data.IDataParameter"/>.</summary>
+            <returns>The name of the <see cref="T:System.Data.IDataParameter"/>. 
+            The default is an empty string.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.SourceColumn">
+            <summary>Gets or sets the name of the source column that is mapped to 
+            the <see cref="T:System.Data.DataSet"/> and used for loading or returning the 
+            <see cref="P:System.Data.IDataParameter.Value"/>.</summary>
+            <returns>The name of the source column that is mapped to the 
+            <see cref="T:System.Data.DataSet"/>. The default is an empty string.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.SourceVersion">
+            <summary>Gets or sets the <see cref="T:System.Data.DataRowVersion"/> to use when 
+            loading <see cref="P:System.Data.IDataParameter.Value"/>.</summary>
+            <returns>One of the <see cref="T:System.Data.DataRowVersion"/> values. 
+            The default is Current.</returns>
+            <exception cref="T:System.ArgumentException">The property was not set one of 
+            the <see cref="T:System.Data.DataRowVersion"/> values.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.Value">
+            <summary>Gets or sets the value of the parameter.</summary>
+            <returns>An <see cref="T:System.Object"/> that is the value of the parameter.
+            The default value is null.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.Precision">
+            <summary>Indicates the precision of numeric parameters.</summary>
+            <returns>The maximum number of digits used to represent the Value property 
+            of a data provider Parameter object. 
+            The default value is 0, which indicates that a data provider sets 
+            the precision for Value.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.Scale">
+            <summary>Indicates the scale of numeric parameters.</summary>
+            <returns>The number of decimal places to which is resolved.  The default is 0.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DbDataParameter.Size">
+            <summary>The size of the parameter.</summary>
+            <returns>The maximum size, in bytes, of the data within the column. 
+            The default value is inferred from the the parameter value.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:System.Data.DbParameterHelperExtensions">
+            <summary>Клас для розширення можливостей IDbDataParameter (придуманий для можливості уточнення 
+            типів параметрів при виконанні через con.ExecuteNonQuery("", p1, p2, p3....) і т.п.)</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.ToDbParam``1(``0)">
+            <summary>Створює IDbDataParameter на основі значення</summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="value">Значення параметра. Якщо null, то значення параметра буде DbNull.Value</param>
+            <returns>Створений IDbDataParameter з проставленим DbType та значенням</returns>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.ToDbParam``1(``0,``0)">
+            <summary>Створює IDbDataParameter на основі значення</summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="value">Значення параметра. Якщо null, то значення параметра буде DbNull.Value</param>
+            <param name="meanAsNull">Значення, яке розцінюється як NULL</param>
+            <returns>Створений IDbDataParameter з проставленим DbType та значенням</returns>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.With(System.Object,System.Data.DbType)">
+            <summary>Дозволяє вказати тип параметра (автоматичне визначення не виконується). 
+            Корисне, коли параметр може бути NULL - через це автоматичне визначення типу неможливе, 
+            використовується DbType по замовчанню, але не всі провайдери це нормально переносять.</summary>
+            <param name="value">Значення параметра</param>
+            <param name="type">Бажаний тип параметра</param>
+            <returns>Якщо значення параметра є IDbDataParameter-ом, то здійснюється встановлення поля DbType, 
+            інакше створюється "штучний" IDbDataParameter, який буде містити тип і значення параметра</returns>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.With(System.Data.IDbDataParameter,System.Data.ParameterDirection)">
+            <summary>Встановлює значення Direction вказаного параметра</summary>
+            <param name="parameter">Параметр</param>
+            <param name="direction">Напрямок параметра</param>
+            <returns>Цей самий параметр</returns>
+            <remarks>Метод призначений в основному для зв'язування в ланцюжок p.With(...).With(...)</remarks>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.With(System.Data.IDbDataParameter,System.String)">
+            <summary>Встановлює значення ParameterName вказаного параметра</summary>
+            <param name="parameter">Параметр</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Цей самий параметр</returns>
+            <remarks>Метод призначений в основному для зв'язування в ланцюжок p.With(...).With(...)</remarks>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.With(System.Data.IDbDataParameter,System.Int32)">
+            <summary>Встановлює значення Size вказаного параметра</summary>
+            <param name="parameter">Параметр</param>
+            <param name="size">Розмір параметра</param>
+            <returns>Цей самий параметр</returns>
+            <remarks>Метод призначений в основному для зв'язування в ланцюжок p.With(...).With(...)</remarks>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.With(System.Data.IDbDataParameter,System.Byte,System.Byte)">
+            <summary>Встановлює значення Scale/Precision вказаного параметра</summary>
+            <param name="parameter">Параметр</param>
+            <param name="precision">Precision параметра. The maximum number of digits 
+            used to represent the Value property of a data provider Parameter object. 
+            The default value is 0, which indicates that a data provider 
+            sets the precision for Value.</param>
+            <param name="scale">Scale параметра. The number of decimal 
+            places to which Value is resolved. The default is 0.</param>
+            <returns>Цей самий параметр</returns>
+            <remarks>Метод призначений в основному для зв'язування в ланцюжок p.With(...).With(...)</remarks>
+        </member>
+        <member name="M:System.Data.DbParameterHelperExtensions.WithSourceColumn(System.Data.IDbDataParameter,System.String)">
+            <summary>Встановлює значення SourceColumn вказаного параметра</summary>
+            <param name="parameter">Параметр</param>
+            <param name="sourceColumn">Колонка зв'язування</param>
+            <returns>Цей самий параметр</returns>
+            <remarks>Метод призначений в основному для зв'язування в ланцюжок p.With(...).WithSourceColumn(...)</remarks>
+        </member>
+        <member name="T:System.Data.DataReaderDecoration.DelayedCommandDisposeDataReader">
+            <summary>Клас для відкладеного знищення команди, в межах якої виконується рідер</summary>
+        </member>
+        <member name="M:System.Data.DataReaderDecoration.DelayedCommandDisposeDataReader.#ctor(System.Data.IDataReader,System.Data.IDbCommand)">
+            <summary> Конструтор </summary>
+            <param name="sourceReader">Ридер</param>
+            <param name="hostCommand">Команда</param>
+        </member>
+        <member name="M:System.Data.DataReaderDecoration.DelayedCommandDisposeDataReader.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, 
+            or resetting unmanaged resources.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DataReaderDecoration.DelayedCommandDisposeDataReader.CurrentRecord">
+            <summary>Поточний запис даних.</summary>
+        </member>
+        <member name="M:System.Data.GetCommandTextHelper.GetCommandText(System.Data.IDbCommand,System.Globalization.CultureInfo)">
+            <summary>Одержання тексту команди з підставленними значеннями параметрів</summary>
+            <param name="cmd">Команда</param>
+            <param name="ci"></param>
+            <returns>Рядкове представлення команди</returns>
+        </member>
+        <member name="M:System.Data.GetCommandTextHelper.GetCommandText(System.Data.IDbCommand)">
+            <summary>Одержання тексту команди з підставленними значеннями параметрів</summary>
+            <param name="cmd">Команда</param>
+            <returns>Рядкове представлення команди</returns>
+        </member>
+        <member name="M:System.Data.GetCommandTextHelper.ConvertToString(System.IFormatProvider,System.Data.DbType,System.Object)">
+            <summary>Одержання рядкового представлення об'єкта відповідно до його типу в базі даних</summary>
+            <param name="ci">Format provider</param>
+            <param name="dbType">Тип об'єкта в базі даних</param>
+            <param name="value">Значення об'єкта</param>
+            <returns>Рядкове представлення (NULL, якщо value == null || value == DbNull.Value)</returns>
+        </member>
+        <member name="T:System.Data.IDataParameterCollectionExtensions">
+            <summary>Клас для розширення можливостей IDataParameterCollection</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.SafeIndexOf(System.Data.IDataParameterCollection,System.String)">
+            <summary>Одержання індекса параметра</summary>
+            <param name="collection">Колекція параметрів</param>
+            <param name="name">Назва параметра</param>
+            <exception cref="T:System.IndexOutOfRangeException">Якщо параметра з такою назвою не існує</exception>
+            <returns>Індекс вказаного параметра</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.Get(System.Data.IDataParameterCollection,System.Int32)">
+            <summary>Одержання параметра</summary>
+            <param name="collection">Колекція параметрів</param>
+            <param name="index">Індекс параметра</param>
+            <returns>Вказаний параметр</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.Get(System.Data.IDataParameterCollection,System.String)">
+            <summary>Одержання параметра</summary>
+            <param name="collection">Колекція параметрів</param>
+            <param name="name">Назва параметра</param>
+            <returns>Вказаний параметр</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.GetValue``1(System.Data.IDataParameterCollection,System.Int32)">
+            <summary>Одержання типізованного значення параметра</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="collection">Колекція параметрів</param>
+            <param name="index">Індекс параметра</param>
+            <returns>Значення вказаного параметра</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.GetValue``1(System.Data.IDataParameterCollection,System.String)">
+            <summary>Одержання типізованного значення параметра</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="collection">Колекція параметрів</param>
+            <param name="name">Назва параметра</param>
+            <returns>Значення вказаного параметра</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.GetValue``1(System.Data.IDataParameterCollection,System.Int32,``0)">
+            <summary>Одержання типізованного значення параметра</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="collection">Колекція параметрів</param>
+            <param name="index">Індекс параметра</param>
+            <param name="ifNullValue">Значення, що певертається у випадку, коли значення параметра NULL</param>
+            <returns>Значення вказаного параметра</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.GetValue``1(System.Data.IDataParameterCollection,System.String,``0)">
+            <summary>Одержання типізованного значення параметра</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="collection">Колекція параметрів</param>
+            <param name="name">Назва параметра</param>
+            <param name="ifNullValue">Значення, що певертається у випадку, коли значення параметра NULL</param>
+            <returns>Значення вказаного параметра</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.Replace(System.Data.IDataParameterCollection,System.Object,System.Object)">
+            <summary>Здійснює заміну в колекції параметрів одного значення на інше</summary>
+            <param name="collection">Колекція</param>
+            <param name="src">Що міняємо</param>
+            <param name="dst">Чим заміняємо</param>
+            <returns>Цю саму колекцію (для зручності)</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.Replace(System.Data.IDataParameterCollection,System.Data.DbType,System.Data.DbType)">
+            <summary>Здійснює заміну в колекції параметрів одного типу на інший</summary>
+            <param name="collection">Колекція</param>
+            <param name="srcType">Який тип міняємо</param>
+            <param name="dstType">Тип, яким заміняємо</param>
+            <returns>Цю саму колекцію (для зручності)</returns>
+        </member>
+        <member name="M:System.Data.IDataParameterCollectionExtensions.ForEach(System.Data.IDataParameterCollection,System.Action{System.Data.IDbDataParameter})">
+            <summary>Для кожного параметра колекції виконує вказану дію</summary>
+            <param name="collection">Колекція параметрів команди</param>
+            <param name="action">Дія</param>
+            <returns>Цю саму колекцію (для зручності)</returns>
+        </member>
+        <member name="T:System.Data.IDbCommandExtensions">
+            <summary>Клас для розширення можливостей IDbCommand</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.CreateTextCommand(System.Data.IDbCommand,System.String)">
+            <summary> Створює текст запиту згудно деяких правил </summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="commandText">Запит</param>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.Data.DbType,System.Data.ParameterDirection,System.String,System.Object)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="type">Тип параметра</param>
+            <param name="direction">Напрямок параметра</param>
+            <param name="parameterName">Назва параметра</param>
+            <param name="value">Значення</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.Data.DbType,System.Data.ParameterDirection,System.String)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="type">Тип параметра</param>
+            <param name="direction">Напрямок параметра</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.Data.DbType,System.String)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="type">Тип параметра</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.Data.DbType)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="type">Тип параметра</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.Data.ParameterDirection,System.String)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="direction">Напрямок параметра</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand,System.String)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+            <example>cmd.AddParameter("ClientName").Value = "John"; </example>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.AddParameter(System.Data.IDbCommand)">
+            <summary>Добавляє і прив'язує параметр в команду</summary>
+            <param name="cmd">SQL-команда</param>
+            <returns>Створений і прив'язаний до команди параметр</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.GetParameter(System.Data.IDbCommand,System.String)">
+            <summary>Одержання параметра команди з вказаним іменем</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="parameterName">Назва параметра</param>
+            <returns>Параметр</returns>
+            <remarks>Стандартний cmd.Parameters[name] чомусь вертає object, а НЕ IDbDataParameter, тому треба ще приведення типу</remarks>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.GetParameter(System.Data.IDbCommand,System.Int32)">
+            <summary>Одержання параметра команди з вказаним іменем</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="index">Індекс параметра</param>
+            <returns>Параметр</returns>
+            <remarks>Стандартний cmd.Parameters[i] чомусь вертає object, а НЕ IDbDataParameter, тому треба ще приведення типу</remarks>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.GetCommandText(System.Data.IDbCommand)">
+            <summary>Одержання тексту команди з підставленними значеннями параметрів</summary>
+            <param name="cmd">Команда</param>
+            <returns>Рядкове представлення команди</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.PrepareParameters(System.Data.IDbCommand)">
+            <summary>Здійснює підготовку колекції параметрів до виконання команди</summary>
+            <param name="cmd">Команда</param>
+            <returns>Ця сама команда з підготовленими параметрами</returns>
+            <example>Приклад демонструє роботу із методом PrepareParameters(). 
+            <code>
+            using (IDbCommand cmd = con.CreateCommand(timeout, proc, values))
+            {
+             // тут уточнення властивостей параметрів ...
+             cmd.PrepareParameters().ExecuteNonQuery();
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ExecuteScalar``1(System.Data.IDbCommand,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ExecuteNonQuery(System.Data.IDbCommand,System.Object[])">
+            <summary>Виконує вказану команду і повертає кількість рядків, 
+            на які вплинуло виконання запиту</summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ExecuteNonQuery(System.Data.IDbCommand,System.Data.IDbCommandExtensions.CommandAffectedRowsCountValidator)">
+            <summary>Виконує вказану команду і повертає кількість рядків, 
+            на які вплинуло виконання запиту. За допомогою вказаного методу перевірки проводиться контроль 
+            кількості рядків, на які вплинуло виконання команди. Якщо метод перевірки повертає false, 
+            генерується <see cref="T:System.InvalidOperationException"/></summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="validator">Метод перевірки правильності кількості рядків, на які вплинуло виконання команди</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ExecuteNonQuery(System.Data.IDbCommand,System.Data.IDbCommandExtensions.CommandAffectedRowsCountValidator,System.Object[])">
+            <summary>Виконує вказану команду і повертає кількість рядків, 
+            на які вплинуло виконання запиту. За допомогою вказаного методу перевірки проводиться контроль 
+            кількості рядків, на які вплинуло виконання команди. Якщо метод перевірки повертає false, 
+            генерується <see cref="T:System.InvalidOperationException"/></summary>
+            <param name="cmd">SQL-команда</param>
+            <param name="validator">Метод перевірки правильності кількості рядків, на які вплинуло виконання команди</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ReadToCollection``1(System.Data.IDbCommand,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary>Виконує вказану команду і наповнює колекцію результатами виконання запиту</summary>
+            <param name="cmd">Команда</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ReadAsList``1(System.Data.IDbCommand,System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary>Виконує вказану команду і повертає результат виконання запиту у вигляді списку об'єктів.</summary>
+            <param name="cmd">Команда</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <returns>Список об'єктів</returns>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.ReadDeffered``1(System.Data.IDbCommand,System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary>Виконує вказану команду і повертає результат виконання запиту у вигляді переліку об'єктів. 
+            Дані читаються із бази по мірі проходу по переліку (deffered-виконання).</summary>
+            <param name="cmd">Команда</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.SetParameterPropertiesFromValueReflect(System.Object,System.Object)">
+            <summary> Установить значения из параметров By Brick</summary>
+            <param name="p">Параметр</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="M:System.Data.IDbCommandExtensions.SetParameterPropertiesFromValue(System.Data.IDbDataParameter,System.Object)">
+            <summary> Установить значения из параметров By Sky</summary>
+            <param name="p">Параметр</param>
+            <param name="value">Значение</param>
+        </member>
+        <member name="T:System.Data.IDbCommandExtensions.CommandAffectedRowsCountValidator">
+            <summary>Метод перевірки правильності кількості рядків, на які вплинуло виконання команди</summary>
+            <param name="affectedRowsCount">Кількість рядків, на які вплинуло виконання команди</param>
+            <returns>true, якщо кількість рядків є правильною (тобто, очікуваною при виконнані даної SQL-команди)</returns>
+        </member>
+        <member name="T:System.Data.IDbConnectionExtensions">
+            <summary>Клас для розширення можливостей IDbConnection</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="F:System.Data.IDbConnectionExtensions.DefaultTimeout">
+            <summary>Таймаут по замовчанню</summary>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteNonQuery(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            кількість рядків, на які вплинуло виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalar(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalar``1(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+             значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="con">З'єднання з базою даних</param>
+             <param name="timeout">Таймаут</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <typeparam name="T">Тип значення, що повертається</typeparam>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalarEx(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalarEx``1(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+             значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="con">З'єднання з базою даних</param>
+             <param name="timeout">Таймаут</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteReader(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Об'єкт для зчитування даних</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteProcedure(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних і 
+            повертає код повернення процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Код повернення процедури</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteProcedureEx(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних і 
+            повертає код повернення процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Набір параметрів ReturnValue, Output та InputOutput</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToTable(System.Data.IDbConnection,System.String,System.Data.DataSet,System.String[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає таблицю, наповнену результатом виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="ds">DataSet, що містить таблицю. Якщо такої таблиці нема, вона буде створена. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableNames">Назва таблиць для заповнення</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToTable(System.Data.IDbConnection,System.String,System.Collections.Generic.IList{System.Object},System.Data.DataSet,System.String[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає таблицю, наповнену результатом виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"> </param>
+            <param name="ds">DataSet, що містить таблицю. Якщо такої таблиці нема, вона буде створена. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableNames">Назва таблиць для заповнення</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToTable(System.Data.IDbConnection,System.String,System.Object[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає таблицю, наповнену результатом виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"> </param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToTable(System.Data.IDbConnection,System.String,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає таблицю, наповнену результатом виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToTable(System.Data.IDbConnection,System.String,System.Data.DataSet,System.String,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає таблицю, 
+            наповнену результатом виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="ds">DataSet, що містить таблицю. Якщо такої таблиці нема, вона буде створена. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableName">Назва таблиці</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToCollection``1(System.Data.IDbConnection,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadAsList``1(System.Data.IDbConnection,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту</param>
+            <returns>Список об'єктів</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadDeffered``1(System.Data.IDbConnection,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді переліку об'єктів. 
+            Дані читаються із бази по мірі проходу по переліку (deffered-виконання).</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту</param>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.StateManager(System.Data.IDbConnection)">
+            <summary>Створення об'єкта для автоматичного відкривання та закривання з'єдання з базою даних.
+            Для використання в конструкції using(...). Якщо з'єднання реально відкривалось, воно буде закрите 
+            при виході з using(...), а якщо було відкрите - залишиться відкритим</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <returns>Об'єкт для автоматичного вікривання та закривання з'єдання з базою даних</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.EnsureClosed(System.Data.IDbConnection)">
+            <summary>Закриває з'єднання, якщо воно не закрите</summary>
+            <param name="con">З'єднання з базою даних</param>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.EnsureOpened(System.Data.IDbConnection)">
+            <summary>Відкриває з'єднання, якщо воно не відкрите</summary>
+            <param name="con">З'єднання з базою даних</param>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.CreateCommand(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Створює в рамках з'єднання з базою даних нову SQL-команду</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів команди (параметри - це ? в тексті запиту)</param>
+            <returns>SQL-команда</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.CreateProcCommand(System.Data.IDbConnection,System.Int32,System.String,System.Object[])">
+            <summary>Створює в рамках з'єднання з базою даних нову SQL-команду для виконання процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури (без всіляких exec, call чи ? для параметрів - просто назва процедури)</param>
+            <param name="values">Значення параметрів процедури</param>
+            <returns>SQL-команда</returns>
+            <remarks>В перелік параметрів команди першим параметром добавяяєтся параметр для одержання 
+            коду повернення процедури.
+            За необхідності, перед виконанням команди можна уточнити властивості параметрів</remarks>
+            <example>Приклад демонструє роботу із методом CreateProcCommand(). 
+            Якщо необхідності в уточненні параметрів немає і все працює і так, то замість використання 
+            цього шаблонного коду можно скористатися методом ExecuteProcedure()
+            <code>
+            using (IDbCommand cmd = con.CreateProcCommand(timeout, proc, values))
+            {
+             // тут уточнення властивостей параметрів ...
+             cmd.ExecuteNonQuery();
+             int retCode = cmd.Parameters.GetValue&lt;int&gt;(0);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.CreateProcedureCommand(System.Data.IDbConnection,System.Data.IDbCommand,System.String,System.Object[])">
+            <summary> Створюю все для процедури </summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="cmd">Команда</param>
+            <param name="proc">Процедура</param>
+            <param name="values">Параметри</param>
+            <returns>Команду</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ParseProcedureName(System.String)">
+            <summary>Одержує назву процедури із тексту команди виклику процедури (можливо із вказаними ?)</summary>
+            <param name="commandText">Текст виклику процедури</param>
+            <returns>Назва процедури</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.CreateCommand(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Створює в рамках з'єднання з базою даних нову SQL-команду</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів команди (параметри - це ? в тексті запиту)</param>
+            <returns>SQL-команда</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.CreateProcCommand(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Створює в рамках з'єднання з базою даних нову SQL-команду для виконання процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="proc">Назва процедури (без всіляких exec, call чи ? для параметрів - просто назва процедури)</param>
+            <param name="values">Значення параметрів процедури</param>
+            <returns>SQL-команда</returns>
+            <remarks>За необхідності, перед виконанням команди можна уточнити властивості параметрів</remarks>
+            <example>Приклад демонструє роботу із методом CreateProcCommand(). 
+            Якщо необхідності в уточненні параметрів немає і все працює і так, то замість використання 
+            цього шаблонного коду можно скористатися методом ExecuteProcedure()
+            <code>
+            using (IDbCommand cmd = con.CreateProcCommand(timeout, proc, values))
+            {
+             // тут уточнення властивостей параметрів ...
+             cmd.ExecuteNonQuery();
+             int retCode = cmd.Parameters.GetValue&lt;int&gt;(0);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteNonQuery(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає кількість рядків, на які вплинуло виконання запиту</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalar(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalarEx(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalar``1(System.Data.IDbConnection,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних (в окремій транзакції) і 
+             повертає значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="con">З'єднання з базою даних</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <typeparam name="T">Тип значення, що повертається</typeparam>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteScalarEx``1(System.Data.IDbConnection,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+             значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="con">З'єднання з базою даних</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteProcedure(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає код повернення процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Код повернення процедури</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteProcedureEx(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає код повернення процедури</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Набір параметрів ReturnValue, Output та InputOutput</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ExecuteReader(System.Data.IDbConnection,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних </summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Об'єкт для зчитування даних</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadToCollection``1(System.Data.IDbConnection,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadAsList``1(System.Data.IDbConnection,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+            <returns>Список об'єктів</returns>
+        </member>
+        <member name="M:System.Data.IDbConnectionExtensions.ReadDeffered``1(System.Data.IDbConnection,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="con">З'єднання з базою даних</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту</param>
+        </member>
+        <member name="T:System.Data.IDbDataParameterExtensions">
+            <summary>Клас для розширення можливостей IDbDataParameter</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.IDbDataParameterExtensions.GetScale(System.Data.IDbDataParameter)">
+            <summary>Одержує РЕАЛЬНЕ значення Scale данного параметра 
+            (якщо це можливо - залежить від реалізації провайдера)</summary>
+            <param name="p">Параметр</param>
+            <returns>Значення scale</returns>
+        </member>
+        <member name="M:System.Data.IDbDataParameterExtensions.SetScale(System.Data.IDbDataParameter,System.Byte)">
+            <summary>Встановлює РЕАЛЬНЕ значення Scale данного параметра 
+            (якщо це можливо - залежить від реалізації провайдера)</summary>
+            <param name="p">Параметр</param>
+            <param name="value">Значення</param>
+        </member>
+        <member name="M:System.Data.IDbDataParameterExtensions.GetPrecision(System.Data.IDbDataParameter)">
+            <summary>Одержує РЕАЛЬНЕ значення Precision данного параметра 
+            (якщо це можливо - залежить від реалізації провайдера)</summary>
+            <param name="p">Параметр</param>
+            <returns>Значення precision</returns>
+        </member>
+        <member name="M:System.Data.IDbDataParameterExtensions.SetPrecision(System.Data.IDbDataParameter,System.Byte)">
+            <summary>Встановлює РЕАЛЬНЕ значення Precision данного параметра 
+            (якщо це можливо - залежить від реалізації провайдера)</summary>
+            <param name="p">Параметр</param>
+            <param name="value">Значення</param>
+        </member>
+        <member name="T:System.Data.IDbTransactionExtensions">
+            <summary>Клас для розширення можливостей IDbTransaction</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="F:System.Data.IDbTransactionExtensions.DefaultTimeout">
+            <summary>Таймаут по замовчанню</summary>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.CreateCommand(System.Data.IDbTransaction)">
+            <summary>Створює в рамках транзакції нову SQL-команду</summary>
+            <param name="tran">Транзакція</param>
+            <returns>SQL-команда</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.CreateCommand(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Створює в рамках транзакції нову SQL-команду</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів команди (параметри - це ? в тексті запиту)</param>
+            <returns>SQL-команда</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.CreateProcCommand(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Створює в транзакції нову SQL-команду для виконання процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури (без всіляких exec, call чи ? для параметрів - просто назва процедури)</param>
+            <param name="values">Значення параметрів процедури</param>
+            <returns>SQL-команда</returns>
+            <remarks>В перелік параметрів команди першим параметром добавяяєтся параметр для одержання 
+            коду повернення процедури.
+            За необхідності, перед виконанням команди можна уточнити властивості параметрів</remarks>
+            <example>Приклад демонструє роботу із методом CreateProcCommand(). 
+            Якщо необхідності в уточненні параметрів немає і все працює і так, то замість використання 
+            цього шаблонного коду можно скористатися методом ExecuteProcedure()
+            <code>
+            using (IDbCommand cmd = con.CreateProcCommand(timeout, proc, values))
+            {
+             // тут уточнення властивостей параметрів ...
+             cmd.ExecuteNonQuery();
+             int retCode = cmd.Parameters.GetValue&lt;int&gt;(0);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteNonQuery(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає кількість рядків, 
+            на які вплинуло виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalar(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає значення 
+            в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalar``1(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає значення 
+            в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <typeparam name="T">Тип значення, що повертається</typeparam>
+            <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalarEx(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalarEx``1(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+             значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="tran">Транзакція</param>
+             <param name="timeout">Таймаут</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteProcedure(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках транзакції і повертає код повернення процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Код повернення процедури</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteProcedureEx(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних і 
+            повертає код повернення процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Набір параметрів ReturnValue, Output та InputOutput</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteReader(System.Data.IDbTransaction,System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції</summary>
+            <param name="tran">Транзакція</param>
+            <param name="timeout">Таймаут</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Об'єкт для зчитування даних</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToTable(System.Data.IDbTransaction,System.String,System.Data.DataSet,System.String[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках вказаної транзакції і 
+            повертає таблиці, наповнені результатом виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="ds">DataSet, що містить таблицю/таблиці. Якщо такої/таких таблиць нема, 
+            вона(и) будуть створені. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableNames">Назва таблиць для заповнення</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнений DataSet</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToTable(System.Data.IDbTransaction,System.String,System.Collections.Generic.IList{System.Object},System.Data.DataSet,System.String[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках вказаної транзакції і 
+            повертає таблиці, наповнені результатом виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values">Параметри запиту </param>
+            <param name="ds">DataSet, що містить таблицю/таблиці. Якщо такої/таких таблиць нема, 
+            вона(и) будуть створені. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableNames">Назва таблиць для заповнення</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнений DataSet</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToTable(System.Data.IDbTransaction,System.String,System.Data.DataSet,System.String,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає таблицю, 
+            наповнену результатом виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="ds">DataSet, що містить таблицю. Якщо такої таблиці нема, вона буде створена. 
+            Якщо є - дані будуть добавлені</param>
+            <param name="tableName">Назва таблиці</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToTable(System.Data.IDbTransaction,System.String,System.Object[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає таблицю, 
+            наповнену результатом виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values">Параметры </param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToTable(System.Data.IDbTransaction,System.String,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає таблицю, 
+            наповнену результатом виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Заповнена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToCollection``1(System.Data.IDbTransaction,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="tran">Транзакція</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadAsList``1(System.Data.IDbTransaction,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="tran">Транзакція</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+            <returns>Список об'єктів</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadDeffered``1(System.Data.IDbTransaction,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.Int32,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді переліку об'єктів. 
+            Дані читаються із бази по мірі проходу по переліку (deffered-виконання).</summary>
+            <param name="tran">Транзакція</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="timeout">Таймаут</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.CreateCommand(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Створює в рамках транзакції нову SQL-команду</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів команди (параметри - це ? в тексті запиту)</param>
+            <returns>SQL-команда</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.CreateProcCommand(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Створює в транзакції нову SQL-команду для виконання процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="proc">Назва процедури (без всіляких exec, call чи ? для параметрів - просто назва процедури)</param>
+            <param name="values">Значення параметрів процедури</param>
+            <returns>SQL-команда</returns>
+            <remarks>За необхідності, перед виконанням команди можна уточнити властивості параметрів</remarks>
+            <example>Приклад демонструє роботу із методом CreateProcCommand(). 
+            Якщо необхідності в уточненні параметрів немає і все працює і так, то замість використання 
+            цього шаблонного коду можно скористатися методом ExecuteProcedure()
+            <code>
+            using (IDbCommand cmd = tran.CreateProcCommand(timeout, proc, values))
+            {
+             // тут уточнення властивостей параметрів ...
+             cmd.ExecuteNonQuery();
+             int retCode = cmd.Parameters.GetValue&lt;int&gt;(0);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteNonQuery(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає кількість рядків, 
+            на які вплинуло виконання запиту</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Кількість рядків</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalar(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає значення в першій колонці першого 
+            рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalar``1(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції і повертає значення в першій колонці першого 
+            рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <typeparam name="T">Тип значення, що повертається</typeparam>
+            <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalarEx(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+            значення в першій колонці першого рядка в повернутому масиві даних</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Значення</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteScalarEx``1(System.Data.IDbTransaction,System.String,System.Object[])">
+             <summary>Виконує вказаний запит в рамках з'єднання з базою даних і повертає 
+             значення в першій колонці першого рядка в повернутому масиві даних</summary>
+             <param name="tran">Транзакція</param>
+             <param name="query">SQL-запит</param>
+             <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+             <returns>Значення</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і результатом виконнання запиту є NULL</exception>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteProcedure(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках транзакції і повертає код повернення процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Код повернення процедури</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteProcedureEx(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказану процедуру в рамках з'єднання з базою даних (в окремій транзакції) і 
+            повертає код повернення процедури</summary>
+            <param name="tran">Транзакція</param>
+            <param name="proc">Назва процедури</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Набір параметрів ReturnValue, Output та InputOutput</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ExecuteReader(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках транзакції</summary>
+            <param name="tran">Транзакція</param>
+            <param name="query">SQL-запит</param>
+            <param name="values">Значення параметрів SQL-запиту (параметри - це ? в тексті запиту)</param>
+            <returns>Об'єкт для зчитування даних</returns>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadDeffered``1(System.Data.IDbTransaction,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді переліку об'єктів. 
+            Дані читаються із бази по мірі проходу по переліку (deffered-виконання).</summary>
+            <param name="tran">Транзакція</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadToCollection``1(System.Data.IDbTransaction,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="tran">Транзакція</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+        </member>
+        <member name="M:System.Data.IDbTransactionExtensions.ReadAsList``1(System.Data.IDbTransaction,System.Data.DataTableExtensions.ConvertRecordToObject{``0},System.String,System.Object[])">
+            <summary>Виконує вказаний запит в рамках з'єднання з базою даних і 
+            повертає результат виконання запиту у вигляді списку</summary>
+            <param name="tran">Транзакція</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+            <param name="selectCommand">SQL-запит</param>
+            <param name="values"></param>
+            <returns>Список об'єктів</returns>
+        </member>
+        <member name="T:System.Data.ICurrentRecord">
+            <summary>Інтерфейс для доступу до поточного запису</summary>
+        </member>
+        <member name="P:System.Data.ICurrentRecord.Values">
+            <summary>Значення колонок</summary>
+        </member>
+        <member name="P:System.Data.ICurrentRecord.Item(System.Int32)">
+            <summary>Значення у вказаній колонці</summary>
+            <param name="i">Номер колонки</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="P:System.Data.ICurrentRecord.Length">
+            <summary>Кількість елементів (колонок)</summary>
+        </member>
+        <member name="T:System.NumExtension">
+            <summary> Метод и розширення для числових типів </summary>
+        </member>
+        <member name="M:System.NumExtension.ToScale(System.Int32,System.Int32)">
+            <summary> Перевести у систему счислення </summary>
+            <param name="source">Що перевести</param>
+            <param name="scale">В яку систему від 2 до 36 включно перевести</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="M:System.NumExtension.ToScale(System.Int64,System.Int32)">
+            <summary> Перевести у систему счислення </summary>
+            <param name="source">Що перевести</param>
+            <param name="scale">В яку систему від 2 до 36 включно перевести</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="T:System.StringExtention">
+            <summary>Методи розширення для рядків</summary>
+        </member>
+        <member name="M:System.StringExtention.Squeeze(System.String)">
+            <summary> Сжать строку после сериализации</summary>
+            <param name="s">Строка</param>
+            <returns>Сжатая строка</returns>
+        </member>
+        <member name="M:System.StringExtention.CutTextByLength(System.String,System.Int32)">
+            <summary> Обрізати текст до певної довжини, вилучивши переноси строки та табуляції і додавши три крапки у кінці</summary>
+            <param name="s">Текст</param>
+            <param name="len">Довжина</param>
+            <returns>Новий текст</returns>
+        </member>
+        <member name="M:System.StringExtention.GetShortPathName(System.String)">
+            <summary> Отримати короткий шлях до файлу з ~</summary>
+            <param name="longPath">Стандартній шлях</param>
+            <returns>Короткий або стандартний шлях(якщо помилка)</returns>
+        </member>
+        <member name="T:System.Data.CustomDataRecordHandler">
+            <summary>Метод, який конструює запис даних.</summary>
+            <param name="reader">Запис даних.</param>
+            <returns>Запис даних.</returns>
+            <example>Приклад методу: object[] record = new object[reader.FieldCount]; 
+            reader.GetValues(record); 
+            return record;</example>
+        </member>
+        <member name="T:System.Data.CustomDataReader">
+            <summary>Читач даних у якому записи даних конструюються програмістом.</summary>
+        </member>
+        <member name="T:System.Data.DataReaderDecoration.DataReaderWithBufferedRecord">
+            <summary>Базовий клас ддя класів, що мають використовують буферизоване читання</summary>
+        </member>
+        <member name="P:System.Data.DataReaderDecoration.DataReaderWithBufferedRecord.CurrentRecord">
+            <summary>Поточний запис даних.</summary>
+        </member>
+        <member name="F:System.Data.CustomDataReader.Handler">
+            <summary>Метод, який конструює запис даних.</summary>
+        </member>
+        <member name="M:System.Data.CustomDataReader.#ctor(System.Data.IDataReader,System.Data.CustomDataRecordHandler)">
+            <summary>Конструктор.</summary>
+            <param name="sourceReader">Читач даних. Наприклад: selectCommand.ExecuteReader().</param>
+            <param name="handler">Метод, який конструює запис даних. Приклад методу: object[] record = new object[reader.FieldCount]; reader.GetValues(record); return record;.</param>
+        </member>
+        <member name="M:System.Data.CustomDataReader.Read">
+            <summary>Advances the <see cref="T:System.Data.IDataReader"/> to the next record.</summary>
+            <returns>true if there are more rows; otherwise, false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:System.Data.DataRowAdapter">
+            <summary>Об'єкт-адаптер для представлення рядка у вигляді IDataRecord</summary>
+            <remarks>Original source was found at http://geeknotes.wordpress.com/2007/03/21/datarow-adaptation-to-idatarecord/</remarks>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.#ctor(System.Data.DataRow)">
+            <summary>Створює об'єкт-адаптер для представлення рядка у вигляді IDataRecord</summary>
+            <param name="row">датаров</param>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetBoolean(System.Int32)">
+            <summary>Gets the value of the specified column as a Boolean.</summary>
+            <returns>The value of the column.</returns>
+            <param name="i">The zero-based column ordinal.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetByte(System.Int32)">
+            <summary>Gets the 8-bit unsigned integer value of the specified column.</summary>
+            <returns>The 8-bit unsigned integer value of the specified column.</returns>
+            <param name="i">The zero-based column ordinal. </param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>Reads a stream of bytes from the specified column offset into the buffer as an array, 
+            starting at the given buffer offset.</summary>
+            <returns>The actual number of bytes read.</returns>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferoffset">The index for buffer to start the read operation.</param>
+            <param name="fieldOffset">The index within the field from which to start the read operation.</param>
+            <param name="i">The zero-based column ordinal.</param>
+            <param name="length">The number of bytes to read.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetChar(System.Int32)">
+            <summary>Gets the character value of the specified column.</summary>
+            <returns>The character value of the specified column.</returns>
+            <param name="i">The zero-based column ordinal.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>Reads a stream of characters from the specified column offset into 
+            the buffer as an array, starting at the given buffer offset.</summary>
+            <returns>The actual number of characters read.</returns>
+            <param name="fieldoffset">The index within the row from which to start the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferoffset">The index for buffer to start the read operation.</param>
+            <param name="i">The zero-based column ordinal.</param>
+            <param name="length">The number of bytes to read.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetData(System.Int32)">
+            <summary>Gets an <see cref="T:System.Data.IDataReader"/> to be used when the field 
+            points to more remote structured data.</summary>
+            <returns>An <see cref="T:System.Data.IDataReader"/> to be used when the field 
+            points to more remote structured data.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetDataTypeName(System.Int32)">
+            <summary>Gets the data type information for the specified field.</summary>
+            <returns>The data type information for the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetDateTime(System.Int32)">
+            <summary>Gets the date and time data value of the specified field.</summary>
+            <returns>The date and time data value of the spcified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetDecimal(System.Int32)">
+            <summary>Gets the fixed-position numeric value of the specified field.</summary>
+            <returns>The fixed-position numeric value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetDouble(System.Int32)">
+            <summary>Gets the double-precision floating point number of the specified field.</summary>
+            <returns>The double-precision floating point number of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>. </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetFieldType(System.Int32)">
+            <summary>Gets the <see cref="T:System.Type"/> information corresponding to the type of 
+            <see cref="T:System.Object"/> that would be returned from 
+            <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)"/>.</summary>
+            <returns>The <see cref="T:System.Type"/> information corresponding to the type of 
+            <see cref="T:System.Object"/> that would be returned from 
+            <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)"/>.</returns>
+            <param name="i">The index of the field to find. </param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetFloat(System.Int32)">
+            <summary>Gets the single-precision floating point number of the specified field.</summary>
+            <returns>The single-precision floating point number of the specified field.</returns>
+            <param name="i">The index of the field to find. </param><exception cref="T:System.IndexOutOfRangeException">The index passed was outside the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>. </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetGuid(System.Int32)">
+            <summary>Returns the GUID value of the specified field.</summary>
+            <returns>The GUID value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetInt16(System.Int32)">
+            <summary>Gets the 16-bit signed integer value of the specified field.</summary>
+            <returns>The 16-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetInt32(System.Int32)">
+            <summary>Gets the 32-bit signed integer value of the specified field.</summary>
+            <returns>The 32-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetInt64(System.Int32)">
+            <summary>Gets the 64-bit signed integer value of the specified field.</summary>
+            <returns>The 64-bit signed integer value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetName(System.Int32)">
+            <summary>Gets the name for the field to find.</summary>
+            <returns>The name of the field or the empty string (""), if there is no value to return.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetOrdinal(System.String)">
+            <summary>Return the index of the named field.</summary>
+            <returns>The index of the named field.</returns>
+            <param name="name">The name of the field to find.</param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetString(System.Int32)">
+            <summary>Gets the string value of the specified field.</summary>
+            <returns>The string value of the specified field.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetValue(System.Int32)">
+            <summary>Return the value of the specified field.</summary>
+            <returns>The <see cref="T:System.Object"/> which will contain the field value upon return.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.GetValues(System.Object[])">
+            <summary>Gets all the attribute fields in the collection for the current record.</summary>
+            <returns>The number of instances of <see cref="T:System.Object"/> in the array.</returns>
+            <param name="values">An array of <see cref="T:System.Object"/> to copy the attribute fields into.</param>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:System.Data.DataRowAdapter.IsDBNull(System.Int32)">
+            <summary>Return whether the specified field is set to null.</summary>
+            <returns>true if the specified field is set to null. Otherwise, false.</returns>
+            <param name="i">The index of the field to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.
+            </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DataRowAdapter.Row">
+            <summary>Рядок</summary>
+        </member>
+        <member name="P:System.Data.DataRowAdapter.Item(System.String)">
+            <summary>Gets the column with the specified name.</summary>
+            <returns>The column with the specified name as an <see cref="T:System.Object"/>.</returns>
+            <param name="name">The name of the column to find.</param>
+            <exception cref="T:System.IndexOutOfRangeException">No column with the specified name was found.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DataRowAdapter.Item(System.Int32)">
+            <summary>Gets the column located at the specified index.</summary>
+            <returns>The column located at the specified index as an <see cref="T:System.Object"/>.</returns>
+            <param name="i">The index of the column to get.</param>
+            <exception cref="T:System.IndexOutOfRangeException">The index passed was outside 
+            the range of 0 through <see cref="P:System.Data.IDataRecord.FieldCount"/>.</exception>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:System.Data.DataRowAdapter.FieldCount">
+            <summary>Gets the number of columns in the current row.</summary>
+            <returns>When not positioned in a valid recordset, 0; otherwise the 
+            number of columns in the current record. The default is -1.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:System.Data.DataTableExtensions">
+            <summary>Клас для розширення можливостей DataTable</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.SelectToTable(System.Data.DataTable,System.String,System.String,System.Data.DataViewRowState)">
+            <summary>Вибирає дані з таблиці в іншу таблицю</summary>
+            <param name="dt">Таблиця з якої відбираються дані</param>
+            <param name="filterExpression">Критерій відбору рядків</param>
+            <param name="sort">Сортування</param>
+            <param name="recordStates">Стан рядків, які будуть відбиратися</param>
+            <returns>Таблиця із відібраними даними</returns>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.SelectToTable(System.Data.DataTable,System.String,System.String)">
+            <summary>Вибирає дані з таблиці в іншу таблицю</summary>
+            <param name="dt">Таблиця з якої відбираються дані</param>
+            <param name="filterExpression">Критерій відбору рядків</param>
+            <param name="sort">Сортування</param>
+            <returns>Таблиця із відібраними даними</returns>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.SelectToTable(System.Data.DataTable,System.String)">
+            <summary>Вибирає дані з таблиці в іншу таблицю</summary>
+            <param name="dt">Таблиця з якої відбираються дані</param>
+            <param name="filterExpression">Критерій відбору рядків</param>
+            <returns>Таблиця із відібраними даними</returns>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.ToCollection``1(System.Data.DataTable,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary> Робить з таблиці колекцію </summary>
+            <param name="dt">Таблиця з якої відбираються дані</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.ToCollectionParallel``1(System.Data.DataTable,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary> Робить з таблиці колекцію </summary>
+            <param name="dt">Таблиця з якої відбираються дані</param>
+            <param name="collection">Типізована колекція для заповнення</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.ToAnonymousCollection(System.Data.DataTable)">
+            <summary> Створити колекцію анонімного типу з записів таблиці </summary>
+            <param name="dt">Таблиця</param>
+            <returns>Колекція</returns>
+        </member>
+        <member name="M:System.Data.DataTableExtensions.ToDynamicCollection(System.Data.DataTable)">
+            <summary> Таблиця в список динамічного типу </summary>
+            <param name="dt">Таблиця</param>
+            <returns>Список</returns>
+        </member>
+        <member name="T:System.Data.DataTableExtensions.ConvertRecordToObject`1">
+            <summary>Делегат для перетворення даних рядка в об'єкт</summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="rec">Рядок даних</param>
+            <returns>Створений об'єкт</returns>
+        </member>
+        <member name="T:System.Data.DbTypeExtensions">
+            <summary>Клас для розширення можливостей DbType</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.DbTypeExtensions.GetCtsType(System.Data.DbType)">
+            <summary>Одержує CTS-тип, що відподвідає даному DBType</summary>
+            <param name="type">Тип бази даних</param>
+            <returns>CTS-тип</returns>
+        </member>
+        <member name="M:System.Data.DbTypeExtensions.GetDbType(System.Type)">
+            <summary>Одержує тип бази даних по CTS-типу</summary>
+            <param name="type">CTS-тип</param>
+            <returns>Тип бази</returns>
+        </member>
+        <member name="T:System.Data.IDataReaderExtensions">
+            <summary>Клас для розширення можливостей IDataReader</summary>
+            <remarks>Компілюється тільки в MSVS2008 і вище. Працює на .NET framework 2.0 і вище</remarks>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.CreateTable(System.Data.IDataReader)">
+            <summary>Створює таблицю по структурі вказаного reader-а</summary>
+            <param name="reader">Об'єкт для читання результату SQL-запиту з бази даних</param>
+            <returns>Створена таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.ReadOneTable(System.Data.IDataReader,System.Data.DataSet,System.String,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Створює (якщо треба) таблицю з вказаним іменем по структурі вказаного reader-а 
+            та заповнює її даними</summary>
+            <param name="reader">Об'єкт для читання результату SQL-запиту з бази даних</param>
+            <param name="tableName">Назва таблиці</param>
+            <param name="ds">DataSet, в якому знаходиться або має знаходитись вказана таблиця</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Створена і наповнена даними таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.ReadToDataSet(System.Data.IDataReader,System.Data.DataSet,System.String[],System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Створює (якщо треба) таблиці з вказаними іменами по структурі вказаного reader-а 
+            та заповнює їх даними</summary>
+            <param name="reader">Об'єкт для читання результату SQL-запиту з бази даних</param>
+            <param name="tableNames">Назви таблиць. Для кожного result-set-у створюється таблиця. 
+            Якщо назви не вказані, то вони формуються наступним чином: "Table", "Table1", "Table2" і т.д.
+            Якщо назв для таблиць вказано замало, то остання вказана назва береться за основу імені і решта 
+            таблиць створюється з додаванням номеру в кінці.</param>
+            <param name="ds">DataSet, в якому знаходяться або мають знаходитись вказані таблиці</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.ReadToTable(System.Data.IDataReader,System.Data.IDataReaderExtensions.OnEncodingValue)">
+            <summary>Створює таблицю по структурі вказаного reader-а та заповнює її даними</summary>
+            <param name="reader">Об'єкт для читання результату SQL-запиту з бази даних</param>
+            <param name="encodingValue">Делегат зовнішнього декодування string та object</param>
+            <returns>Створена і наповнена даними таблиця</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.GetValue``1(System.Data.IDataRecord,System.Int32)">
+            <summary>Одержання типізованного значення колонки</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="index">Індекс колонки</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.GetValue``1(System.Data.IDataRecord,System.Int32,``0)">
+            <summary>Одержання типізованного значення колонки</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="index">Індекс колонки</param>
+            <param name="ifNullValue">Значення, що певертається у випадку, коли в колонці NULL</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.GetValue``1(System.Data.IDataRecord,System.String)">
+            <summary>Одержання типізованного значення колонки</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="name">Назва колонки</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.GetValue``1(System.Data.IDataRecord,System.String,``0)">
+            <summary>Одержання типізованного значення колонки</summary>
+            <typeparam name="T">Тип значення</typeparam>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="name">Назва колонки</param>
+            <param name="ifNullValue">Значення, що певертається у випадку, коли в колонці NULL</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.IsDbNull(System.Data.IDataRecord,System.String)">
+            <summary>Перевіряє, чи є значення у вказаній колонці</summary>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="name">Назва колонки</param>
+            <returns>true, якщо значення нема</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.ContainsColumn(System.Data.IDataRecord,System.String)">
+            <summary>Перевіряє, чи існує колонка з вказаною назвою</summary>
+            <param name="record">Об'єкт для зчитування даних</param>
+            <param name="name">Назва колонки</param>
+            <returns>true, якщо така колонка існує</returns>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.WithRowProcessor(System.Data.IDataReader,System.Data.CustomDataRecordHandler)">
+            <summary>Встановлює користувацький метод обробки для даних кожного рядка 
+            в оригінальному рідері.</summary>
+            <param name="reader">Об'єкт для зчитування даних</param>
+            <param name="handler">Метод обробки даних</param>
+            <returns>Обгортка над оригінальним рідером, що реалізує трансформацію даних 
+            за допомогою вказаного метода</returns>
+            <example>Приклад методу: object[] record = new object[reader.FieldCount]; 
+            reader.GetValues(record); 
+            return record;</example>
+        </member>
+        <member name="M:System.Data.IDataReaderExtensions.ReadToCollection``1(System.Data.IDataReader,System.Collections.Generic.ICollection{``0},System.Data.DataTableExtensions.ConvertRecordToObject{``0})">
+            <summary> Вичитує рідер у колекцію </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="reader">Рідер</param>
+            <param name="collection">Колекція</param>
+            <param name="rowParser">Метод розбору рядка і створення типізованного об'єкта</param>
+        </member>
+        <member name="T:System.Data.IDataReaderExtensions.OnEncodingValue">
+            <summary> Делегат зовнішнього декодування string та object</summary>
+            <param name="value">Значення яке треба пропустити через декодування</param>
+            <returns>Значення після декодування</returns>
+        </member>
+        <member name="T:System.Data.IEnumerableExtensions">
+            <summary>Розширення IEnumerable для перетворення переліку об'єктів в DataTable, 
+            в якому стовпчики відповідають загальнодоступним полям та властивостям об'єктів, 
+            а кожний рядок представляє один об'єкт</summary>
+        </member>
+        <member name="M:System.Data.IEnumerableExtensions.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Конвертує перелік об'єктів в DataTable, в якому стовпчики відповідають 
+            загальнодоступним полям та властивостям об'єктів, а кожний рядок представляє один об'єкт</summary>
+            <typeparam name="T">Тип об'єктів</typeparam>
+            <param name="source">Вхідний перелік</param>
+            <returns>Таблиця</returns>
+        </member>
+        <member name="M:System.Data.IEnumerableExtensions.ToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Data.LoadOption})">
+            <summary>Конвертує перелік об'єктів в DataTable, в якому стовпчики відповідають 
+            загальнодоступним полям та властивостям об'єктів, а кожний рядок представляє один об'єкт</summary>
+            <typeparam name="T">Тип об'єктів</typeparam>
+            <param name="source">Вхідний перелік</param>
+            <param name="options">Опції завантаження</param>
+            <returns>Таблиця</returns>
+        </member>
+        <member name="M:System.Data.IEnumerableExtensions.ToPivotTable``4(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Func{System.Collections.Generic.ICollection{``0},``3},System.Boolean)">
+            <summary> Зробити PIVOT по налаштуванням </summary>
+            <typeparam name="T">Тип запису даних</typeparam>
+            <typeparam name="TColumn">Метод відбіру колонок</typeparam>
+            <typeparam name="TRow">По яким колонкам групувати</typeparam>
+            <typeparam name="TData">Результат агрегативної дії</typeparam>
+            <param name="source">Дані</param>
+            <param name="columnSelector">Які колонки вибирати</param>
+            <param name="rowSelector">По яким колонкам групувати</param>
+            <param name="dataSelector">Результат аргегативної дії</param>
+            <param name="onlyValueInColumn">В імені колонок вставляти тільки значення колонок</param>
+            <returns>Результуюча таблиця</returns>
+        </member>
+        <member name="M:System.Data.IEnumerableExtensions.FormatProperties``1(``0,System.Boolean)">
+            <summary> Форматування, наче ToString </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="obj">Дані</param>
+            <param name="onlyValue">Тільки значення властивостей</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Data.IEnumerableExtensions.ConvertDataRow``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Data.LoadOption})">
+            <summary> Конвертор строк </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="source">Соурс</param>
+            <param name="options">Опції</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Linq.IEnumerableExtensions">
+            <summary> Клас-розширення для IEnumerable </summary>
+        </member>
+        <member name="M:System.Linq.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary> Метод-розширення foreach</summary>
+            <typeparam name="TSource">Тип елементів послідовності</typeparam>
+            <param name="source">Джерело</param>
+            <param name="action">Дія</param>
+        </member>
+        <member name="M:System.Linq.IEnumerableExtensions.ToSlice``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary> Метод розширення для отримання певної кількості записів за один раз </summary>
+            <typeparam name="T">Тип елементів послідовності</typeparam>
+            <param name="collection">Сама послідовність </param>
+            <param name="pageSize">Певна кількість записів</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Data.ObjectConvertExtensions">
+            <summary>Клас для добавлення методів конвертації об'єктів в інший тип (включаючи Nullable типи)</summary>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.ConvertTo``1(System.Object)">
+            <summary>Конвертувати об'єкт у вказаний тип</summary>
+            <typeparam name="T">Тип, в який конвертувати (може бути Nullable-типом)</typeparam>
+            <param name="value">Об'єкт</param>
+            <returns>Сконвертований об'єкт</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли T - value type і obj є NULL</exception>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.ConvertTo(System.Object,System.Type)">
+            <summary>Конвертувати об'єкт у вказаний тип</summary>
+            <param name="value">Об'єкт</param>
+            <param name="type">Тип, в який конвертувати (може бути Nullable-типом)</param>
+            <returns>Сконвертований об'єкт</returns>
+            <exception cref="T:System.InvalidCastException">У випадку, коли type - value type і obj є NULL</exception>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.GetRealisticObjectType(System.Object)">
+            <summary>Добуває справжній тип об'єкта (якщо треба, виколупує його із Nullable&lt;&gt; і Enum-а)</summary>
+            <param name="value">Об'єкт</param>
+            <returns>Справжній тип об'єкта</returns>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.GetTypeEvenThroughNullable(System.Type)">
+            <summary>Добуває справжній тип об'єкта (якщо треба, виколупує його із Nullable&lt;&gt;)</summary>
+            <param name="type">Тип об'єкта</param>
+            <returns>Справжній тип об'єкта</returns>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.GetRealisticType(System.Type)">
+            <summary>Добуває справжній тип (якщо треба, виколупує його із Nullable&lt;&gt; і Enum-а)</summary>
+            <returns>Справжній тип об'єкта</returns>
+        </member>
+        <member name="M:System.Data.ObjectConvertExtensions.GetRealisticType``1">
+            <summary>Добуває справжній тип (якщо треба, виколупує його із Nullable&lt;&gt; і Enum-а)</summary>
+            <returns>Справжній тип об'єкта</returns>
+        </member>
+        <member name="T:System.ObjectExtension">
+            <summary> Вкрадено тут http://www.codeproject.com/Articles/80343/Accessing-private-members + add some </summary>
+        </member>
+        <member name="M:System.ObjectExtension.GetPrivateField``1(System.Object,System.String)">
+            <summary> Доступ до приватного поля </summary>
+            <typeparam name="T">Тип поля</typeparam>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я поля</param>
+            <returns>Або поле або null</returns>
+        </member>
+        <member name="M:System.ObjectExtension.GetPrivateField``1(System.Object,System.String,System.Type)">
+            <summary> Доступ до приватного поля </summary>
+            <typeparam name="T">Тип поля</typeparam>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я поля</param>
+            <param name="baseType">Шукати до базового типу</param>
+            <returns>Або поле або null</returns>
+        </member>
+        <member name="M:System.ObjectExtension.GetPrivateProperty``1(System.Object,System.String)">
+            <summary> Доступ до приватної властивості</summary>
+            <typeparam name="T">Тип поля</typeparam>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <returns>Або властивість або null</returns>
+        </member>
+        <member name="M:System.ObjectExtension.GetPrivateProperty``1(System.Object,System.String,System.Type)">
+            <summary> Доступ до приватної властивості</summary>
+            <typeparam name="T">Тип поля</typeparam>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="baseType">Шукати до базового типу</param>
+            <returns>Або властивість або null</returns>
+        </member>
+        <member name="M:System.ObjectExtension.SetPrivateField(System.Object,System.String,System.Object)">
+            <summary> Встановити значення приватного поля</summary>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я поля</param>
+            <param name="value">Значення</param>
+        </member>
+        <member name="M:System.ObjectExtension.SetPrivateField(System.Object,System.String,System.Object,System.Type)">
+            <summary> Встановити значення приватного поля</summary>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я поля</param>
+            <param name="value">Значення</param>
+            <param name="baseType">Шукати до базового типу</param>
+        </member>
+        <member name="M:System.ObjectExtension.SetPrivateProperty(System.Object,System.String,System.Object)">
+            <summary> Встановити значення приватної властивості</summary>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="value">Значення</param>
+        </member>
+        <member name="M:System.ObjectExtension.SetPrivateProperty(System.Object,System.String,System.Object,System.Type)">
+            <summary> Встановити значення приватної властивості</summary>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="value">Значення</param>
+            <param name="baseType">Шукати до базового типу</param>
+        </member>
+        <member name="M:System.ObjectExtension.CallPrivateMethod``1(System.Object,System.String,System.Object[])">
+            <summary> Виклик приватного методу </summary>
+            <typeparam name="T">Тип повартаємого параметру</typeparam>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="param">Параметри методу</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectExtension.CallPrivateMethod``1(System.Object,System.Type,System.String,System.Object[])">
+            <summary> Виклик приватного методу </summary>
+            <typeparam name="T">Тип повартаємого параметру</typeparam>
+            <param name="baseType">Шукати до базового типу</param>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="param">Параметри методу</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectExtension.CallPrivateMethod(System.Object,System.String,System.Object[])">
+            <summary> Виклик приватного методу який не повертає значення </summary>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="param">Параметри методу</param>
+        </member>
+        <member name="M:System.ObjectExtension.CallPrivateMethod(System.Object,System.Type,System.String,System.Object[])">
+            <summary> Виклик приватного методу який не повертає значення </summary>
+            <param name="baseType">Шукати до базового типу</param>
+            <param name="obj">Інстанс об'єкту</param>
+            <param name="name">Ім'я властивості</param>
+            <param name="param">Параметри методу</param>
+        </member>
+        <member name="M:System.ObjectExtension.GetColumnValue(System.Object,System.String,System.Object)">
+            <summary> Отримати значення </summary>
+            <param name="row">Запис або класс</param>
+            <param name="columnName">Імя колонки(властивості)</param>
+            <param name="defaultValue">Якщо не знайшов значення чи колонку то повернути це</param>
+            <returns>Весь запис якщо імя колонки пусте, або значення вказаної колонки, або віиключення, якщо колонки немає</returns>
+        </member>
+        <member name="M:System.ObjectExtension.DeepCloneCreator``1(``0)">
+            <summary> Копія об'єкта </summary>
+            <typeparam name="T">Тип повартаємого параметру</typeparam>
+            <param name="source">З чого робити</param>
+            <returns>Копія</returns>
+        </member>
+        <member name="T:System.ObjectSqlHelpers">
+            <summary>Клас для добавлення SQL-подібних методів для об'єктів</summary>
+        </member>
+        <member name="M:System.ObjectSqlHelpers.In``1(``0,``0[])">
+            <summary>Аналог SQL in (...). Зауважте, що null != null</summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">Значення</param>
+            <param name="values">Перелік значень, в які має входити значення, що тестується</param>
+            <returns>true, якщо value міститься серед values</returns>
+        </member>
+        <member name="M:System.ObjectSqlHelpers.Between``1(``0,``0,``0)">
+            <summary>Аналог SQL between (...)</summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">Значення</param>
+            <param name="minValue">Мінімальне значення</param>
+            <param name="maxValue">Максимальне значення</param>
+            <returns>true, якщо value міститься серед values</returns>
+        </member>
+        <member name="M:System.ObjectSqlHelpers.IsNull(System.Object)">
+            <summary> Перевірка на null та DbNull.Value </summary>
+            <param name="value">Що перерірити</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="M:System.ObjectSqlHelpers.IsNull``1(System.Object,``0,System.Boolean)">
+            <summary> Перевірка на null та DbNull.Value, та підставити defaultValue значення якщо null</summary>
+            <param name="value">Що перерірити</param>
+            <param name="defaultValue">Що підставити якщо null</param>
+            <param name="returnDefaultIfException">Повертати default(T) якщо виникло виключення при приведенні типів</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="M:System.ObjectSqlHelpers.IfNull``1(System.Object,``0,``0)">
+            <summary> Перевірка на null та DbNull.Value, та підставити defaultValue значення якщо null</summary>
+            <param name="value">Що перерірити</param>
+            <param name="ifValue">Що підставити якщо null</param>
+            <param name="elseValue">Що підставити якщо не null</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="T:System.Data.DataReaderDecoration.RecordReaderWrapper">
+            <summary>Клас для обгортки буферного запису</summary>
+        </member>
+        <member name="P:System.Data.DataReaderDecoration.RecordReaderWrapper.Values">
+            <summary>Значення колонок</summary>
+        </member>
+        <member name="P:System.Data.DataReaderDecoration.RecordReaderWrapper.Item(System.Int32)">
+            <summary>Значення у вказаній колонці</summary>
+            <param name="i">Номер колонки</param>
+            <returns>Значення у вказаній колонці</returns>
+        </member>
+        <member name="P:System.Data.DataReaderDecoration.RecordReaderWrapper.Length">
+            <summary>Кількість елементів (колонок)</summary>
+        </member>
+    </members>
+</doc>
