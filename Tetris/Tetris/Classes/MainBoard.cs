@@ -26,7 +26,7 @@ namespace Tetris.Classes
             _window = mainWindow;
             _currentFigure = new Tetromino();
             _nextFigure = new Tetromino();
-            _nextFigureBoard = new NextFigureBoard(nextFigureGrid);//{NextFigure = _nextFigure};
+            _nextFigureBoard = new NextFigureBoard(nextFigureGrid);
             _nextFigureBoard.DrawFigure(_nextFigure, 2);
             DrawFigure(_currentFigure, 1);
         } 
