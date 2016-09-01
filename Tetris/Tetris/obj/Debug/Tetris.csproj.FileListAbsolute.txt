@@ -26,3 +26,5 @@ C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\obj\Debug\Tetris.csproj.Generat
 C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\obj\Debug\Tetris.exe.licenses
 C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\bin\Debug\Tetris.exe
 C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\obj\Debug\GameOver.baml
+C:\Users\y.slapik\Documents\GitHub\Tetris\Tetris\obj\Debug\GameOver.g.cs

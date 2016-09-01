@@ -1,84 +1,41 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-
-
 namespace Tetris.Classes
 {
     /// <summary>Главное игровое поле</summary>
-    internal sealed class MainBoard:Board
-    {
-        private int _score;
-        private int _filledLines;
-        private Tetromino _nextFigure;
-        private readonly NextFigureBoard _nextFigureBoard ;
-        private Tetromino _currentFigure;
+    public sealed class MainBoard:Board{
+        #region Поля класса
+        private int _score;  //счет
+        private int _filledLines;//заполненные линии
+        private Tetromino _nextFigure;//след.фигура
+        private readonly NextFigureBoard _nextFigureBoard;// доска со следующей фигурой
+        private Tetromino _currentFigure;//текущая фигура на основной доске
+        private readonly MainWindow _window;//окно приложения
+        private readonly GameOver _resultForm;//окно окончания игры 
+        #endregion
 
-        public MainBoard(Grid tetrisGrid,Grid nextFigureGrid)
+        #region К-тор
+        /// <summary> К-тор главной доски. Отрисовывает фигуры при старте на привязанных гридах. </summary>
+        /// <param name="tetrisGrid">Игровой грид</param>
+        /// <param name="nextFigureGrid">Грид следующей фигуры</param>
+        /// <param name="mainWindow">Основная форма</param>
+        public MainBoard(Grid tetrisGrid, Grid nextFigureGrid, MainWindow mainWindow)
+            : base(tetrisGrid)
         {
-            Cols = tetrisGrid.ColumnDefinitions.Count;
-            Rows = tetrisGrid.RowDefinitions.Count;
-            _score = 0;
-            _filledLines = 0;
-            
-            BlockControls = new Label[Cols, Rows];
-            for (var i = 0; i < Cols; i++)
-            {
-                for (var j = 0; j < Rows; j++)
-                {
-                    BlockControls[i, j] = new Label
-                    {
-                        Background = Brushes.Transparent,
-                        BorderBrush = Brushes.Transparent,
-                        BorderThickness = new Thickness(1, 1, 1, 1)
-                    };
-                    Grid.SetRow(BlockControls[i, j], j);
-                    Grid.SetColumn(BlockControls[i, j], i);
-                    tetrisGrid.Children.Add(BlockControls[i, j]);
-                }
-            }
-            
+            _resultForm = new GameOver();
+            _window = mainWindow;
             _currentFigure = new Tetromino();
             _nextFigure = new Tetromino();
-            _nextFigureBoard = new NextFigureBoard(nextFigureGrid) {NextFigure = _nextFigure};
-            _nextFigureBoard.DrawFigure();
-            DrawFigure();
-            
-        }
+            _nextFigureBoard = new NextFigureBoard(nextFigureGrid);//{NextFigure = _nextFigure};
+            _nextFigureBoard.DrawFigure(_nextFigure, 2);
+            DrawFigure(_currentFigure, 1);
+        } 
+        #endregion
 
-        public int GetScore()
-        {
-            return _score;
-        }
-
-        public int GetFilledLines()                                                              
-        {
-            return _filledLines;
-        }
-
-       
-        public override void DrawFigure()
-        {
-            var position = _currentFigure.GetFigurePosition();
-            var shape = _currentFigure.GetFigureShape();
-            var shapeColor = _currentFigure.GetFigureColor();
-            foreach (var block in shape)
-            {
-                BlockControls[(int) (block.X + position.X) + ((Cols/2) - 1),
-                    (int) (block.Y + position.Y) + 1].Background = shapeColor;
-            }
-        }
-        public override void EraseFigure()
-        {
-            var position = _currentFigure.GetFigurePosition();
-            var shape = _currentFigure.GetFigureShape();
-            foreach (var block in shape)
-            {
-                BlockControls[(int) (block.X + position.X) + ((Cols/2) - 1),
-                    (int)(block.Y + position.Y) + 1].Background = NoBrush;
-            }
-        }
-
+        #region Функции работы с заполненным рядом
+        
+        /// <summary>Проверка заполнен ли ряд, 
+        /// заполнен - удалить и засчитать очки </summary>
         private void CheckRows()
         {
             for (var i = Rows - 1; i > 0; i--)
@@ -92,14 +49,19 @@ namespace Tetris.Classes
                     }
 
                 }
-                if (!full) continue;
+                if (!full)
+                    continue;
                 _score += 100;
                 RemoveRow(i);
                 _filledLines++;
                 i++;
+                _window.rowNum.Content = _filledLines.ToString(" 0000000000");
+                _window.score.Content = _score.ToString(" 0000000000");
             }
         }
 
+        /// <summary>Удалить ряд</summary>
+        /// <param name="row">указанный ряд</param>
         private void RemoveRow(int row)
         {
             for (var i = row; i > 2; i--)
@@ -109,111 +71,132 @@ namespace Tetris.Classes
                     BlockControls[j, i].Background = BlockControls[j, i - 1].Background;
                 }
             }
-        }
+        } 
+        #endregion
 
+        #region Функции перемещения фигуры на доске
+
+        #region Влево
+        /// <summary>
+        /// Сдвинуть фигуру на доске влево
+        /// </summary>
         public void CurrentFigureMoveLeft()
         {
-            var position = _currentFigure.GetFigurePosition();
-            var shape = _currentFigure.GetFigureShape();
-            var move = true;
-            EraseFigure();
+            var position = _currentFigure.GetFigurePosition();//позиция на момент сдвига
+            var shape = _currentFigure.GetFigureShape();//форма сдвигаемой фигуры
+            var move = true;//можно ли двигать
+            EraseFigure(_currentFigure, 1);//стереть на текущем положении
             foreach (var s in shape)
             {
 
-                if (((int) (s.X + position.X) + ((Cols/2) - 1) - 1) < 0)
+                if (((int)(s.X + position.X) + ((Cols / 2) - 1) - 1) < 0)  //упирается  в стену - двигать нельзя
                 {
                     move = false;
                 }
 
-                else if (!Equals(BlockControls[((int) (s.X + position.X) + ((Cols/2) - 1) - 1),
-                    (int)(s.Y + position.Y) + 1].Background, NoBrush))
+                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1) - 1),    // упирается  в фигуру  - двигать нельзя
+                    (int)(s.Y + position.Y) + 1].Background, NoBrush))  //проверка путем наличия цвета
                 {
                     move = false;
                 }
             }
 
-            if (move)
+            if (move) //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок влево
             {
                 _currentFigure.MoveLeft();
-                DrawFigure();
+                DrawFigure(_currentFigure, 1);
             }
-            else
-            {
-                DrawFigure();
-            }
-        }
 
+            else   //препятсвия есть - просто отрисовать фигуру
+            {
+                DrawFigure(_currentFigure, 1);
+            }
+        } 
+        #endregion
+
+        #region Вправо
         public void CurrentFigureMoveRight()
         {
-            var position = _currentFigure.GetFigurePosition();
-            var shape = _currentFigure.GetFigureShape();
-            var move = true;
-            EraseFigure();
+            var position = _currentFigure.GetFigurePosition(); //позиция на момент сдвига
+            var shape = _currentFigure.GetFigureShape();  //форма сдвигаемой фигуры
+            var move = true; //можно ли двигать
+            EraseFigure(_currentFigure, 1);
             foreach (var s in shape)
             {
-                if (((int) (s.X + position.X) + ((Cols/2) - 1) + 1) >= Cols)
+                if (((int)(s.X + position.X) + ((Cols / 2) - 1) + 1) >= Cols)     //упирается  в стену - двигать нельзя
                 {
                     move = false;
                 }
-                else if (!Equals(BlockControls[((int) (s.X + position.X) + ((Cols/2) - 1) + 1),
-                    (int)(s.Y + position.Y) + 1].Background, NoBrush))
+                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1) + 1),     // упирается  в фигуру  - двигать нельзя
+                    (int)(s.Y + position.Y) + 1].Background, NoBrush))   //проверка путем наличия цвета
                 {
                     move = false;
                 }
             }
-            if (move)
+            if (move)                  //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок вправо
             {
                 _currentFigure.MoveRight();
-                DrawFigure();
+                DrawFigure(_currentFigure, 1);
             }
-            else
+            else    //препятсвия есть - просто отрисовать фигуру
             {
-                DrawFigure();
+                DrawFigure(_currentFigure, 1);
             }
-        }
+        } 
+        #endregion
 
+        #region Вниз
         public void CurrentFigureMoveDown()
         {
-            var position = _currentFigure.GetFigurePosition();
-            var shape = _currentFigure.GetFigureShape();
-            var move = true;
-            EraseFigure();
+
+            var position = _currentFigure.GetFigurePosition();      //позиция на момент сдвига
+            var shape = _currentFigure.GetFigureShape();        //форма сдвигаемой фигуры
+            var move = true;  //можно ли двигать
+            EraseFigure(_currentFigure, 1); //стереть на текущем положении
             foreach (var s in shape)
             {
-                if (((int) (s.Y + position.Y) + 1 + 1) >= Rows)
+                if (((int)(s.Y + position.Y) + 1 + 1) >= Rows) //упирается в дно
                 {
                     move = false;
                 }
-                else if (!Equals(BlockControls[((int) (s.X + position.X) + ((Cols/2) - 1)),
-                    (int)(s.Y + position.Y) + 1 + 1].Background, NoBrush))
+                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1)),
+                    (int)(s.Y + position.Y) + 1 + 1].Background, NoBrush))    //упирается в фигуру
                 {
                     move = false;
-                    if (((int) (s.Y + position.Y) + 1 + 1) > 3) continue;
-                    DrawFigure();MessageBox.Show("       GAME OVER\n\nSCORE:" + _score.ToString(" 0000000000") + "\nLINES:" +
-                                                 _filledLines.ToString("   0000000000"));
-                    var x = Application.Current;
-                        
-                    x.Shutdown();
-                    return;
+                    if (((int)(s.Y + position.Y) + 1 + 1) > 3)  //упирается ли в потолок. да - конец игры
+                        continue;
+                    DrawFigure(_currentFigure, 1);
+                    _resultForm.ShowDialog(_score.ToString(" 0000000000"));
+                    if (_resultForm.DialogResult == false)
+                    {
+                        var x = Application.Current;
+                        x.Shutdown();
+                        return;
+                    }
+                    _window.GameStart();
                 }
             }
             if (move)
             {
                 _currentFigure.MoveDown();
-                DrawFigure();
+                DrawFigure(_currentFigure, 1);
             }
             else
             {
-                 DrawFigure();
+                DrawFigure(_currentFigure, 1);
+                _nextFigureBoard.EraseFigure(_nextFigure, 2);
                 CheckRows();
                 _currentFigure = _nextFigure;
                 _nextFigure = new Tetromino();
-                _nextFigureBoard.EraseFigure();
-                _nextFigureBoard.NextFigure = _nextFigure;
-                _nextFigureBoard.DrawFigure();
-            }                                       
-        }
 
+                //_nextFigureBoard.NextFigure = _nextFigure;
+                _nextFigureBoard.DrawFigure(_nextFigure, 2);
+            }
+
+        } 
+        #endregion
+
+        #region Вращать
         public void CurrentFigureMoveRotate()
         {
             var position = _currentFigure.GetFigurePosition();
@@ -221,40 +204,43 @@ namespace Tetris.Classes
             var shape = _currentFigure.GetFigureShape();
             var move = true;
             shape.CopyTo(s, 0);
-            EraseFigure();
+            EraseFigure(_currentFigure, 1);
             for (var i = 0; i < s.Length; i++)
             {
                 var x = s[i].X;
-                s[i].X = s[i].Y*-1;
+                s[i].X = s[i].Y * -1;
                 s[i].Y = x;
-                if (((int) ((s[i].Y + position.Y) + 1)) >= Rows)
+                if (((int)((s[i].Y + position.Y) + 1)) >= Rows)
                 {
                     move = false;
                 }
-                else if (((int) (s[i].X + position.X) + ((Cols/2) - 1)) < 0)
+                else if (((int)(s[i].X + position.X) + ((Cols / 2) - 1)) < 0)
                 {
                     move = false;
                 }
-                else if (((int) (s[i].X + position.X) + ((Cols/2) - 1)) >= Cols)
+                else if (((int)(s[i].X + position.X) + ((Cols / 2) - 1)) >= Cols)
                 {
                     move = false;
                 }
-                else if (!Equals(BlockControls[((int) (s[i].X + position.X) + ((Cols/2) - 1)),
+                else if (!Equals(BlockControls[((int)(s[i].X + position.X) + ((Cols / 2) - 1)),
                     (int)(s[i].Y + position.Y) + 1].Background, NoBrush))
                 {
-                    move = false;                                                              
+                    move = false;
                 }
             }
             if (move)
             {
                 _currentFigure.Rotate();
-                DrawFigure();
+                DrawFigure(_currentFigure, 1);
             }
             else
             {
-                DrawFigure();          
+                DrawFigure(_currentFigure, 1);
             }
-        }
+        }  
+        #endregion
+
+        #endregion
     }
 }
 
