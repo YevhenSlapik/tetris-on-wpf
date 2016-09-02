@@ -4,6 +4,7 @@ using System.Windows.Media;
 
 namespace Tetris.Classes
 {
+     ///TODO: снять abstract?
     /// <summary> Родительский класс для досок с гридами </summary>
     public abstract class Board
     {

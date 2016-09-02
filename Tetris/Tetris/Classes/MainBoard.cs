@@ -4,6 +4,7 @@ namespace Tetris.Classes
 {
     /// <summary>Главное игровое поле</summary>
     public sealed class MainBoard:Board{
+        
         #region Поля класса
         private int _score;  //счет
         private int _filledLines;//заполненные линии
