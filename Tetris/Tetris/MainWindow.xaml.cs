@@ -56,10 +56,10 @@ namespace Tetris
             _tetrisMainBoard.CurrentFigureMoveDown();
         }
         /// <summary>
-        /// привязка клавиш управления
+        /// Привязка клавиш управления к клавиатуре
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>                                                           
+        /// <param name="sender">форма</param>
+        /// <param name="e">нажатая клавиша</param>                                                           
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             

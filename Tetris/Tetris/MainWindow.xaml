@@ -56,7 +56,11 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
         </Grid>
-        <Grid x:Name="nextFigureGrid" HorizontalAlignment="Left" Height="144" Margin="320,336,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="-0.246,0.538">
+        <Label Content="SCORE" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" Width="87" Height="34" FontSize="20" FontFamily="Arial Black"/>
+        <Label Content="ROWS" HorizontalAlignment="Left" Margin="280,97,0,0" VerticalAlignment="Top" Width="75" Height="34" FontSize="20" FontFamily="Arial Black"/>
+        <Label x:Name="score" Content="0000000000" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="17"/>
+        <Label x:Name="rowNum" Content="0000000000" HorizontalAlignment="Left" Margin="280,131,0,0" VerticalAlignment="Top" FontSize="17" FontFamily="Arial Black"/>
+        <Grid x:Name="nextFigureGrid" HorizontalAlignment="Left" Height="219" VerticalAlignment="Top" Width="232" RenderTransformOrigin="-0.246,0.538" Margin="280,319,0,0">
             <Grid.BindingGroup>
                 <BindingGroup/>
             </Grid.BindingGroup>
@@ -73,10 +77,6 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <Label Content="Next figure" HorizontalAlignment="Left" Margin="320,257,0,0" VerticalAlignment="Top" Height="41" Width="177" FontSize="26" FontFamily="Arial Black" RenderTransformOrigin="0.209,0.439"/>
-        <Label Content="SCORE" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" Width="87" Height="34" FontSize="20" FontFamily="Arial Black"/>
-        <Label Content="ROWS" HorizontalAlignment="Left" Margin="280,97,0,0" VerticalAlignment="Top" Width="75" Height="34" FontSize="20" FontFamily="Arial Black"/>
-        <Label x:Name="score" Content="0000000000" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="17"/>
-        <Label x:Name="rowNum" Content="0000000000" HorizontalAlignment="Left" Margin="280,131,0,0" VerticalAlignment="Top" FontSize="17" FontFamily="Arial Black"/>
+        <Label Content="Next figure" HorizontalAlignment="Left" Margin="280,263,0,0" VerticalAlignment="Top" Height="51" Width="232" FontFamily="Arial Black" FontSize="35" RenderTransformOrigin="0.495,0.412"/>
     </Grid>
 </Window>

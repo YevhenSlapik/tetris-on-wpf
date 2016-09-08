@@ -7,6 +7,9 @@ namespace Tetris.Classes
     /// <summary>Класс который отвечает за генерацию фигур</summary>
     public class Tetromino 
     {
+        /// <summary>
+        /// К-тор фигурки. Инициализирует  3 поля фигурки -  текущую позицию (0,0), начальный цвет, форму и окончательный цвет
+        /// </summary>
         public Tetromino()
         {
             _currentPos = new Point(0, 0);

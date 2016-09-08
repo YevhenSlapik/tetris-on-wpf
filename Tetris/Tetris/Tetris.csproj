@@ -71,9 +71,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\AI.cs" />
     <Compile Include="Classes\Board.cs" />
     <Compile Include="Classes\MainBoard.cs" />
-    <Compile Include="Classes\NextFigureBoard.cs" />
     <Compile Include="Classes\Tetromino.cs" />
     <Compile Include="GameOver.xaml.cs">
       <DependentUpon>GameOver.xaml</DependentUpon>

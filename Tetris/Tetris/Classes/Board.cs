@@ -4,14 +4,13 @@ using System.Windows.Media;
 
 namespace Tetris.Classes
 {
-     ///TODO: снять abstract?
-    /// <summary> Родительский класс для досок с гридами </summary>
-    public abstract class Board
+     /// <summary> Родительский класс для досок с гридами </summary>
+    public class Board
     {
         #region К-тор
         /// <summary>Базовый к-тор для всех досок. Задает размеры и начальные параметры контрола блоков </summary> 
         /// <param name="grid">оперируемый грид</param>
-        protected Board(Grid grid)
+        public Board(Grid grid)
         {
             Cols = grid.ColumnDefinitions.Count;
             Rows = grid.RowDefinitions.Count;
@@ -40,8 +39,10 @@ namespace Tetris.Classes
         protected int Rows;
         /// <summary> Колонки грида </summary>
         protected int Cols;
-        /// <summary>Контрол блоков для грида в виде  2-мерного массива лейбов для отображения блоков на клетках грида по пойнтам</summary>
-        protected Label[,] BlockControls;
+
+         /// <summary>Контрол блоков для грида в виде  2-мерного массива лейбов для отображения блоков на клетках грида по пойнтам</summary>
+         public Label[,] BlockControls { get; set; }
+
         /// <summary> Цвет клетки в гриде </summary>
         protected Brush NoBrush = Brushes.Transparent; 
         #endregion
@@ -78,3 +79,4 @@ namespace Tetris.Classes
 
     }                                      
 }
+                                                                                                                                                              

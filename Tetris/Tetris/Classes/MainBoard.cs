@@ -9,14 +9,19 @@ namespace Tetris.Classes
         private int _score;  //счет
         private int _filledLines;//заполненные линии
         private Tetromino _nextFigure;//след.фигура
-        private readonly NextFigureBoard _nextFigureBoard;// доска со следующей фигурой
+        private bool _move;  //можно ли двигать
+        private Point _position;//позиция фигуры на момент сдвига
+        private Point[] _shape;  //форма сдвигаемой фигуры
         private Tetromino _currentFigure;//текущая фигура на основной доске
+        private readonly Board _nextFigureBoard;// доска со следующей фигурой
         private readonly MainWindow _window;//окно приложения
         private readonly GameOver _resultForm;//окно окончания игры 
         #endregion
 
         #region К-тор
-        /// <summary> К-тор главной доски. Отрисовывает фигуры при старте на привязанных гридах. </summary>
+        /// <summary> К-тор главной доски. 
+        /// Отрисовывает фигуры при старте на привязанных гридах.
+        /// Инициализирует сами гриды. </summary>
         /// <param name="tetrisGrid">Игровой грид</param>
         /// <param name="nextFigureGrid">Грид следующей фигуры</param>
         /// <param name="mainWindow">Основная форма</param>
@@ -27,7 +32,7 @@ namespace Tetris.Classes
             _window = mainWindow;
             _currentFigure = new Tetromino();
             _nextFigure = new Tetromino();
-            _nextFigureBoard = new NextFigureBoard(nextFigureGrid);
+            _nextFigureBoard = new Board(nextFigureGrid);
             _nextFigureBoard.DrawFigure(_nextFigure, 2);
             DrawFigure(_currentFigure, 1);
         } 
@@ -76,6 +81,16 @@ namespace Tetris.Classes
         #endregion
 
         #region Функции перемещения фигуры на доске
+        /// <summary> Вспомогательный метод для функций перемещения 
+        /// который обновляет данные о фигуре(позиция, форма, возможность сдвига) на момент движения
+        /// </summary>
+        private void GetCurrentFigureInfo()
+        {
+            _position = _currentFigure.GetFigurePosition();//позиция на момент сдвига
+            _shape = _currentFigure.GetFigureShape();//форма сдвигаемой фигуры
+            _move = true;//можно ли двигать
+            EraseFigure(_currentFigure, 1);//стереть на текущем положении
+        }
 
         #region Влево
         /// <summary>
@@ -83,26 +98,22 @@ namespace Tetris.Classes
         /// </summary>
         public void CurrentFigureMoveLeft()
         {
-            var position = _currentFigure.GetFigurePosition();//позиция на момент сдвига
-            var shape = _currentFigure.GetFigureShape();//форма сдвигаемой фигуры
-            var move = true;//можно ли двигать
-            EraseFigure(_currentFigure, 1);//стереть на текущем положении
-            foreach (var s in shape)
+            GetCurrentFigureInfo();
+            foreach (var s in _shape)
             {
 
-                if (((int)(s.X + position.X) + ((Cols / 2) - 1) - 1) < 0)  //упирается  в стену - двигать нельзя
+                if (((int)(s.X + _position.X) + ((Cols / 2) - 1) - 1) < 0)  //упирается  в стену - двигать нельзя
                 {
-                    move = false;
+                    _move = false;
                 }
 
-                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1) - 1),    // упирается  в фигуру  - двигать нельзя
-                    (int)(s.Y + position.Y) + 1].Background, NoBrush))  //проверка путем наличия цвета
+                else if (!Equals(BlockControls[((int)(s.X + _position.X) + ((Cols / 2) - 1) - 1),    // упирается  в фигуру  - двигать нельзя
+                    (int)(s.Y + _position.Y) + 1].Background, NoBrush))  //проверка путем наличия цвета
                 {
-                    move = false;
+                    _move = false;
                 }
             }
-
-            if (move) //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок влево
+            if (_move) //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок влево
             {
                 _currentFigure.MoveLeft();
                 DrawFigure(_currentFigure, 1);
@@ -118,23 +129,20 @@ namespace Tetris.Classes
         #region Вправо
         public void CurrentFigureMoveRight()
         {
-            var position = _currentFigure.GetFigurePosition(); //позиция на момент сдвига
-            var shape = _currentFigure.GetFigureShape();  //форма сдвигаемой фигуры
-            var move = true; //можно ли двигать
-            EraseFigure(_currentFigure, 1);
-            foreach (var s in shape)
+            GetCurrentFigureInfo();
+            foreach (var s in _shape)
             {
-                if (((int)(s.X + position.X) + ((Cols / 2) - 1) + 1) >= Cols)     //упирается  в стену - двигать нельзя
+                if (((int)(s.X + _position.X) + ((Cols / 2) - 1) + 1) >= Cols)     //упирается  в стену - двигать нельзя
                 {
-                    move = false;
+                    _move = false;
                 }
-                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1) + 1),     // упирается  в фигуру  - двигать нельзя
-                    (int)(s.Y + position.Y) + 1].Background, NoBrush))   //проверка путем наличия цвета
+                else if (!Equals(BlockControls[((int)(s.X + _position.X) + ((Cols / 2) - 1) + 1),     // упирается  в фигуру  - двигать нельзя
+                    (int)(s.Y + _position.Y) + 1].Background, NoBrush))   //проверка путем наличия цвета
                 {
-                    move = false;
+                    _move = false;
                 }
             }
-            if (move)                  //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок вправо
+            if (_move)                  //препятсвий нет - отрисовать фигуру со сдвигом на 1 блок вправо
             {
                 _currentFigure.MoveRight();
                 DrawFigure(_currentFigure, 1);
@@ -149,22 +157,18 @@ namespace Tetris.Classes
         #region Вниз
         public void CurrentFigureMoveDown()
         {
-
-            var position = _currentFigure.GetFigurePosition();      //позиция на момент сдвига
-            var shape = _currentFigure.GetFigureShape();        //форма сдвигаемой фигуры
-            var move = true;  //можно ли двигать
-            EraseFigure(_currentFigure, 1); //стереть на текущем положении
-            foreach (var s in shape)
+            GetCurrentFigureInfo();
+            foreach (var s in _shape)
             {
-                if (((int)(s.Y + position.Y) + 1 + 1) >= Rows) //упирается в дно
+                if (((int)(s.Y + _position.Y) + 1 + 1) >= Rows) //упирается в дно
                 {
-                    move = false;
+                    _move = false;
                 }
-                else if (!Equals(BlockControls[((int)(s.X + position.X) + ((Cols / 2) - 1)),
-                    (int)(s.Y + position.Y) + 1 + 1].Background, NoBrush))    //упирается в фигуру
+                else if (!Equals(BlockControls[((int)(s.X + _position.X) + ((Cols / 2) - 1)),
+                    (int)(s.Y + _position.Y) + 1 + 1].Background, NoBrush))    //упирается в фигуру
                 {
-                    move = false;
-                    if (((int)(s.Y + position.Y) + 1 + 1) > 3)  //упирается ли в потолок. да - конец игры
+                    _move = false;
+                    if (((int)(s.Y + _position.Y) + 1 + 1) > 3)  //упирается ли в потолок. да - конец игры
                         continue;
                     DrawFigure(_currentFigure, 1);
                     _resultForm.ShowDialog(_score.ToString(" 0000000000"));
@@ -177,7 +181,7 @@ namespace Tetris.Classes
                     _window.GameStart();
                 }
             }
-            if (move)
+            if (_move)
             {
                 _currentFigure.MoveDown();
                 DrawFigure(_currentFigure, 1);
@@ -200,36 +204,35 @@ namespace Tetris.Classes
         #region Вращать
         public void CurrentFigureMoveRotate()
         {
-            var position = _currentFigure.GetFigurePosition();
+
+            GetCurrentFigureInfo();
             var s = new Point[4];
-            var shape = _currentFigure.GetFigureShape();
-            var move = true;
-            shape.CopyTo(s, 0);
-            EraseFigure(_currentFigure, 1);
+            _shape.CopyTo(s, 0);
+            
             for (var i = 0; i < s.Length; i++)
             {
                 var x = s[i].X;
                 s[i].X = s[i].Y * -1;
                 s[i].Y = x;
-                if (((int)((s[i].Y + position.Y) + 1)) >= Rows)
+                if (((int)((s[i].Y + _position.Y) + 1)) >= Rows)
                 {
-                    move = false;
+                    _move = false;
                 }
-                else if (((int)(s[i].X + position.X) + ((Cols / 2) - 1)) < 0)
+                else if (((int)(s[i].X + _position.X) + ((Cols / 2) - 1)) < 0)
                 {
-                    move = false;
+                    _move = false;
                 }
-                else if (((int)(s[i].X + position.X) + ((Cols / 2) - 1)) >= Cols)
+                else if (((int)(s[i].X + _position.X) + ((Cols / 2) - 1)) >= Cols)
                 {
-                    move = false;
+                    _move = false;
                 }
-                else if (!Equals(BlockControls[((int)(s[i].X + position.X) + ((Cols / 2) - 1)),
-                    (int)(s[i].Y + position.Y) + 1].Background, NoBrush))
+                else if (!Equals(BlockControls[((int)(s[i].X + _position.X) + ((Cols / 2) - 1)),
+                    (int)(s[i].Y + _position.Y) + 1].Background, NoBrush))
                 {
-                    move = false;
+                    _move = false;
                 }
             }
-            if (move)
+            if (_move)
             {
                 _currentFigure.Rotate();
                 DrawFigure(_currentFigure, 1);
@@ -238,7 +241,7 @@ namespace Tetris.Classes
             {
                 DrawFigure(_currentFigure, 1);
             }
-        }  
+        }                                                                                                
         #endregion
 
         #endregion
